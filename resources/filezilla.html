@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>FileZilla Installation | Web Frontend Development</title>
+	<meta name="description" content="FileZilla Installation for CIT 230">
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="../css/course.min.css">
+</head>
+
+<body>
+	<div id="main">
+		<header id="header">
+			<img src="../images/smallbanner.jpg" alt="CIT 230 Course Banner">
+		</header>
+		<main>
+			<article id="article">
+				<h1>FileZilla Installation</h1>
+				<hr>
+
+				<h2>Introduction</h2>
+				<p>This document outlines the basic steps for configuring Filezilla FTP client to work with a site hosted on Bluehost, Hostmonster or Justhost. If you are using a different provider, consult your host provider's site for help if needed. A video demonstrating this process is also available at the bottom of this document.</p>
+
+				<h2>Prerequisites</h2>
+				<p>This document assumes that you already have:</p>
+				<ul>
+					<li>Downloaded and installed the <a href="http://filezilla-project.org/download.php" target="_blank" title="Download the filezilla client - link opens in a new tab">Filezilla client</a>.</li>
+					<li>Installed XAMPP and know where the HTDOCS folder is located in XAMPP. This is where all website resources will be stored.</li>
+					<li>Purchased a hosting account with a hosting provider and have the domain name, FTP username and password to the hosting account. Most providers will send you an email with the username and account information for your site. Consult your email or ask the hosting provider if you have any questions.</li>
+				</ul>
+
+				<h2>Filezilla Connection to Remote Host</h2>
+				<ol>
+					<li>Launch Filezilla</li>
+					<li>Click the "Open the Site Manager" button (top left corner, looks like a computer)
+						<br>
+						<img alt="Image of where the site manager button is located" src="../images/filezilla/opensitemanager.jpg"></li>
+					<li>Click the "New Site" button, a New Site is created in the Select siteEntry area
+						<br>
+						<img alt="Image of the site manager dialog box" src="../images/filezilla/sitemanager.jpg"></li>
+					<li>Give the site a name - your domain name is suggested
+						<ul>
+							<li>In the General area (on the right)</li>
+							<li>Type your domain name (e.g. mydomain.com) in the host text box on the right</li>
+							<li>Leave the Protocol setting</li>
+							<li>Change the Encryption to "Only use plain FTP (insecure)</li>
+							<li>Change the Logon Type to "Normal"</li>
+							<li>Type your FTP username in the User text box</li>
+							<li>Type your password in the Password text box</li>
+						</ul>
+					</li>
+					<li>Move to the "Advanced" category by clicking on Advanced
+						<br>
+						<img alt="Site manager advanced settings" src="../images/filezilla/sitemanageradvanced.jpg">
+						<ul>
+							<li>Click the "Browse" button next to the "Default local directory" text box</li>
+							<li>Navigate to the folder that will hold your website &mdash; this is the <b>htdocs</b> folder in XAMPP.</li>
+							<li>Enter "/public_html" into the Default remote directory text box</li>
+							<li>Turn on the checkbox for "Use synchronized browsing"</li>
+						</ul>
+					</li>
+					<li>Move to the "Transfer Settings" tab.
+						<br /> <img alt="Setting passive ftp mode in the Transfer Settings tab" src="../images/filezilla/passivesettings.jpg">
+						<ul>
+							<li>Click the "Passive" radio button in the "Transfer Mode" group.</li>
+							<li>Click the "Connect" button &mdash; if everything is correct it should connect to your local directory and the remote host.</li>
+						</ul>
+					</li>
+				</ol>
+				<p>Your FTP connection from your local working directory to the remote publishing directory should now be setup. With synchronized browsing enabled when you navigate through your local directory it should also move to the corresponding directory on the remote host.</p>
+
+				<h2>Video</h2>
+				<p>
+					<iframe allowfullscreen height="350" src="https://www.youtube.com/embed/0tTh_RAVQ_Q?wmode=opaque" width="425"></iframe>
+				</p>
+			</article>
+		</main>
+		<footer id="footer">
+			<a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="//i.creativecommons.org/l/by-sa/3.0/88x31.png" /></a> All materials (except as noted) are by <a href="https://blainerobertson.net">Blaine Robertson</a> and licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">Creative Commons Attribution-ShareAlike 3.0 License</a>.</footer>
+	</div>
+	<script src="../js/course.min.js"></script>
+</body>
+
+</html>

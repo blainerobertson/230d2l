@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>FTP House Cleaning | Web Frontend Development</title>
+	<meta name="description" content="FTP House Cleaning directions for CIT 230">
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="../css/course.min.css">
+</head>
+
+<body>
+	<div id="main">
+		<header id="header">
+			<img src="../images/smallbanner.jpg" alt="CIT 230 Course Banner">
+		</header>
+		<main>
+			<article id="article">
+				<h1>FTP House Cleaning</h1>
+				<h2>Introduction</h2>
+				<p>Nobody likes to spend their time cleaning, but sometimes it just has to be done. When you buy web hosting, many host providers create your hosting space on a server and throw in a number of files to “help” you. Don’t get me wrong, they have the best of intentions, but sometimes too much help is no help at all. This exercise has you clean house on those “helpful” files in order to make room for your folders and files. A <a href='#video' title='View the video demonstration'>video demonstration</a> is available at the bottom of this page.</p>
+
+				<h2>Let's See What We Have</h2>
+				<p>To get started open a browser and type in your own domain name. What do you see? Perhaps something like the possibilities below:</p>
+
+				<table>
+					<tr>
+						<td><img src='../images/remotecleanup/bluehost.jpg' alt='An image of a bluehost default page'></td>
+						<td>bluehost.com</td>
+					</tr>
+					<tr>
+						<td><img src='../images/remotecleanup/directory.jpg' alt='An image of a hosting directory without a default page'></td>
+						<td>empty directory</td>
+					</tr>
+					<tr>
+						<td><img src='../images/remotecleanup/justhost.jpg' alt='An image of a justhost default page'></td>
+						<td>justhost.com</td>
+					</tr>
+				</table>
+
+				<p>Keep in mind these are only a representative sample. Yours may look different.</p>
+				<p>In any case, these pages are “placeholders” meant to tell your audience that they have arrived at your domain (that is why your domain name is placed on the page) but there isn’t any content here yet. You’ll also notice that the hosting company’s name is prominently displayed along with a link to their web site (that is called advertising). We want to get rid of the placeholder page and replace it with something of your own.</p>
+
+				<h2>Filezilla - Manage That Web Space</h2>
+				<p>You should already have installed and configured Filezilla to interact with your hosting account and your sub-domain. If not, backup and complete the Filezilla Tutorials, then come back when you’re done. Back? Good, let’s go on.</p>
+
+				<ol>
+					<li>Launch Filezilla and connect to your hosting account.</li>
+					<li>On the right-side of the window you should see a list of folders and files similar to what you see in figure 1 below (keep in mind yours may have different names for things and may have more or fewer items).</li>
+				</ol>
+
+				<figure>
+					<img src='../images/remotecleanup/ftp.jpg' alt='An image of a new hosting environment'>
+					<figcaption>Figure 1: A new hosting environment file and folder example</figcaption>
+				</figure>
+
+				<h2>Files Explained</h2>
+				<p>Take just a minute and understand what you’re looking at:</p>
+				<ul>
+					<li>The top folder, with the two dots to the right is actually a link to take you up one folder or directory level. On your personal computer we call folders “folders” on a server we call a folder a “directory”.</li>
+					<li>The cgi-bin folder is where you can put scripts to process things using other languages like PERL. We won’t be using this folder in this course.</li>
+					<li>The .htaccess file is specialized. It contains, or can contain, commands that the server will read in order to control how your web site is “served” to people who request files that are stored in your site. Don’t delete it!</li>
+					<li>All of the files that begin with numbers are error pages. You probably are familiar with at least one of these.</li>
+					<li>Go back to your browser window that has your placeholder page in it. In the address bar type a forward slash “/” after your domain name and then type gibberish (literally or figuratively - your choice). When done hit your “Enter” key. </li>
+					<li>You should now be looking at the 404.shtml page. Based on what you see on your screen, what is a 404 error? Answer this question for yourself and confirm your answer with someone else to see if they agree with you.</li>
+					<li>The “default.html” page is the placeholder page. Keep in mind that yours may NOT be named default. Your may have a different name - such as home.html or welcome.html or index.html. This is the one page we want to get rid of to begin our house cleaning. But wait just a minute to do it.</li>
+					<li>At the bottom of the figure above is a favicon.ico image file. If you look back at your browser and particularly at the tab where your page is being displayed you should see a small icon on the left side of the tab. That is a favicon. It is meant to help you build brand recognition for your site by displaying it in the tab, in bookmarks and should be very similar if not identical to your site logo.</li>
+				</ul>
+
+				<h2>Get Rid of the Placeholder</h2>
+				<ol>
+					<li>In Filezilla, right-click on the placeholder page (mine is named default.html but yours may be named differently) and select “Delete”.</li>
+					<li>When the confirmation dialog appears, click “Yes”.</li>
+					<li>Go back to your browser and if you need to, return just to your domain name by clicking the “Back” button in your browser or deleting everything after your domain name in the address bar and hitting your “Enter” key.</li>
+					<li>What happened?</li>
+					<li>If you deleted the right file, the placeholder, you should be looking at a 404 page or at a list of files and/or folders and each one is a link (this is a directory listing - see the directory listing image shown earlier in the exercise). Do you understand why? You may want to talk to a neighbor, friend or classmate to see if your answer makes sense to him or her.</li>
+				</ol>
+
+				<h2>Continue the Process (later)</h2>
+				<p>With the placeholder gone, you will want to do more house cleaning of your site later. Eventually you will want to replace all of the numbered error pages with pages of your own. Your pages will need to convey the same messages -- telling people that errors have occurred and what they can do about it, if anything -- but the pages will look like your web site, not the host provider’s web site.</p>
+
+				<p>You will also want to replace the host provider’s favicon with your own, after you have decided a look for your logo. There are many online tools for creating favicons, my favorite is at <a href='//www.chami.com/html-kit/services/favicon/' title='Visit Chami.com and use their favicon tool to create your own favicon'>http://www.chami.com/html-kit/services/favicon/</a>.</p>
+
+				<h2>Summary</h2>
+				<p>Hosting services are helpful in that they create hosting space for your site and usually put files in it that are meant to notify site visitors that the domain and site exist until you can get your own materials in place. But, they also take advantage of those placeholder pages by doing lots of their own advertising. Filezilla (and other FTP applications) let you take control of your hosting space by deleting files and folder, creating new folders, renaming folder and generally managing your assets that exist on the remote server.</p>
+
+				<h2>But wait there’s more...</h2>
+				<p>Sorry, I had to say it. You don’t want to leave your site in this condition. Quick go to the <a href="temp_home.html" title="View the Building a Temporary home page exercise" target="_blank">Building a Temporary Page exercise</a> and get it done!</p>
+
+				<h2 id='video'>Video Demonstration</h2>
+
+				<video style="max-width: 100%;" controls preload="metadata" src="https://blainerobertson.net/media/videos/housekeeping.mp4">
+					<p>Your browser does not support HTML5 video. You may <a href="https://blainerobertson.net/media/videos/basic_page_creation.mp4">download the mp4 version</a> of the file (5mb) for playback on your local machine.</p>
+				</video>
+			</article>
+		</main>
+		<footer id="footer">
+			<a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="//i.creativecommons.org/l/by-sa/3.0/88x31.png" /></a> All materials (except as noted) are by <a href="https://blainerobertson.net">Blaine Robertson</a> and licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">Creative Commons Attribution-ShareAlike 3.0 License</a>.</footer>
+	</div>
+	<script src="../js/course.min.js"></script>
+</body>
+
+</html>
