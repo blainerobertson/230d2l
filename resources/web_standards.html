@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>Web Standards Model | Web Frontend Development</title>
+	<meta name="description" content="Web standards model reading for CIT 230">
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="../css/course.min.css">
+</head>
+
+<body>
+	<div id="main">
+		<header id="header">
+			<img src="../images/smallbanner.jpg" alt="CIT 230 Course Banner">
+		</header>
+		<main>
+			<article id="article">
+				<h1>Web Standards Model</h1>
+				<p><img alt="Reading logo" src="../images/course/reading.png" title="Reading logo"></p>
+
+				<h2>The Technologies</h2>
+				<p>Hyper-text Markup Language (HTML), Cascading Style Sheets (CSS) and JavaScript (JS) are the three basic web technologies used in the Web Standards Development model. All three operate primarily in the web browser on the client device. According to the web development model, each is built independent of the other (meaning they are in their own separate document) but linked together in order to work with one another to create a meaningful experience for the site visitor.</p>
+				<h2>Why Separate?</h2>
+				<p>Why separate html, css and javascript? You can accomplish content, styling and layout just using old HTML&mdash;font elements for style and HTML tables for layout, so why should I bother with this HTML/CSS stuff? Tables for layout, etc. is how it used to be done in the bad old days of web design, and a few people (who don't know any better) still do it like this. We won&rsquo;t be covering such methods in this course -- they are out of date and should remain that way! Here are the most compelling reasons for using CSS and HTML using modern methods, rather than using outdated methods:</p>
+				<ol>
+					<li><strong>Efficiency of code</strong>: The larger your files are, the longer they will take to download, and the more they will cost some people (most people using mobile devices pay for downloads by the megabyte.) You therefore don&rsquo;t want to waste your bandwidth on large pages cluttered up with styling and layout information in every HTML file. A much better alternative is to make the HTML files stripped down and neat, and include the styling and layout information just once in separate CSS file(s.) To see an actual case of this in action, check out <a href="http://www.readwriteweb.com/mobile/2011/09/how-the-boston-globe-pulled-of.php"> How the Boston Globe Pulled off HTML5 Responsible Design</a> where is discussed the rewrite of the Boston Globe website to meet modern standards.</li>
+					<li><strong>Ease of maintenance</strong>: Following on from the last point, if your styling and layout information is only specified in one place, it means you only have to make updates in one place if you want to change your site&rsquo;s appearance. Would you prefer to update this information on every page of your site? I didn&rsquo;t think so.</li>
+					<li><strong>Accessibility</strong>: Web users who are visually impaired can use a piece of software known as a &ldquo;screen reader&rdquo; to access the information through sound rather than sight &mdash; it literally reads the page out to them. In addition voice input software, used by people with mobility impairments, also benefits from well-constructed semantic web pages. Much like a screen reader user uses keyboard commands to navigate headings, links and forms; a voice input user will use voice commands. Web documents marked up semantically rather than presentationally can be easier to navigate and the information in them is more likely to be found by the user. In other words, the faster you get to the content, the better. Screen readers can&rsquo;t access text locked away in images, and find some uses of JavaScript confusing. Make sure that your critical content is available to everyone.</li>
+					<li><strong>Device compatibility</strong>: Because your HTML page is just plain markup, with no style information, it can be reformatted for different devices with vastly differing attributes (eg screen size) by simply applying an alternative style sheet &mdash; you can do this in a few different ways. CSS also natively allows you to specify different style sheets for different presentation methods/media types (e.g. viewing on the screen, printing out, viewing on a mobile device.)</li>
+					<li><strong>Web crawlers/search engines</strong>: Chances are you will want your pages to be easy to find by searching on Google, or other search engines. A search engine uses a &ldquo;crawler&rdquo;, which is a specialized piece of software, to read through your pages. If that crawler has trouble finding the content of your pages, or misinterprets what&rsquo;s important because you haven&rsquo;t defined headings as headings and so on, then chances are your rank in the search results will suffer.</li>
+					<li><strong>It&rsquo;s just good practice</strong>: This is a bit of a &ldquo;because I said so&rdquo; reason, but talk to any professional standards-aware web developer or designer, and they&rsquo;ll tell you that separating content, style, and behavior is the best way to develop an application (<cite>http://www.w3.org/community/webed/wiki/The_web_standards_model_-_HTML_CSS_and_JavaScript</cite>)</li>
+				</ol>
+				<h2>A Brief Introduction</h2>
+				<h3>HTML</h3>
+				<p>HTML is the language for describing the structure of Web pages. HTML gives authors the means to:</p>
+				<ul>
+					<li>Publish online documents with headings, text, tables, lists, photos, etc.</li>
+					<li>Retrieve online information via hypertext links, at the click of a button.</li>
+					<li>Design forms for conducting transactions with remote services, for use in searching for information, making reservations, ordering products, etc.</li>
+					<li>Include spread-sheets, video clips, sound clips, and other applications directly in their documents.</li>
+				</ul>
+				<p>With HTML, authors describe the structure of pages using <em>markup</em>. The <em>elements</em> of the language label pieces of content such as &ldquo;paragraph,&rdquo; &ldquo;list,&rdquo; &ldquo;table,&rdquo; and so on. (<cite>http://www.w3.org/standards/webdesign/htmlcss#whathtml</cite>)</p>
+				<h3>CSS</h3>
+				<p>CSS is the language for describing the presentation of Web pages, including colors, layout, and fonts. It allows one to adapt the presentation to different types of devices, such as large screens, small screens, or printers. CSS is independent of HTML and can be used with any XML-based markup language. The separation of HTML from CSS makes it easier to maintain sites, share style sheets across pages, and tailor pages to different environments. This is referred to as the <em>separation of structure (or: content) from presentation</em>. (<cite>http://www.w3.org/standards/webdesign/htmlcss#whatcss</cite>)</p>
+				<h3>JAVASCRIPT</h3>
+				<p>A script is program code that doesn&rsquo;t need pre-processing (e.g. compiling) before being run. In the context of a Web browser, scripting usually refers to program code written in JavaScript that is executed by the browser when a page is downloaded, or in response to an event triggered by the user.</p>
+				<p>Scripting can make Web pages more dynamic. For example, without reloading a new version of a page it may allow modifications to the content of that page, or allow content to be added to or sent from that page. The former has been called DHTML (Dynamic HTML), and the latter AJAX (Asynchronous JavaScript and XML).</p>
+				<p>Beyond this, scripts increasingly allow developers to create a bridge between the browser and the platform it is running on, making it possible, for example, to create Web pages that incorporate information from the user&rsquo;s environment, such as current location, address book details, etc. (<cite>http://www.w3.org/standards/webdesign/script.html#summary</cite>)</p>
+
+			</article>
+		</main>
+		<footer id="footer">
+			<a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="//i.creativecommons.org/l/by-sa/3.0/88x31.png" /></a> All materials (except as noted) are by <a href="https://blainerobertson.net">Blaine Robertson</a> and licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">Creative Commons Attribution-ShareAlike 3.0 License</a>.</footer>
+	</div>
+	<script src="../js/course.min.js"></script>
+</body>
+
+</html>
