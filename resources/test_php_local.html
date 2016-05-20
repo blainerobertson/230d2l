@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>Testing PHP Locally | Web Frontend Development</title>
+	<meta name="description" content="An overview of testing PHP locally using Brackets and XAMPP for CIT 230">
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="../css/course.min.css">
+</head>
+
+<body>
+	<div id="main">
+		<header id="header">
+			<img src="../images/smallbanner.jpg" alt="CIT 230 Course Banner">
+		</header>
+		<main>
+			<article id="article">
+				<p><img src="../images/course/activity.png" alt="activity logo" title="activity logo" /></p>
+				<h1>Testing PHP Locally</h1>
+				<h2>Introduction</h2>
+				<p>Way back in week 2 you installed XAMPP (pronounced shamp). We have been doing all of our work inside of XAMPP (the htdocs folder is inside of the xampp folder). But until now we haven't needed to fire up the server. With the introduction of modularization this week and the transitioning to PHP web pages, that is now changing.</p>
+				<h2>A Workflow Change</h2>
+				<p>Until this point when we wrote a web page with the .html or .htm extension, Brackets could use its built-in web server to let us test things by simply clicking the "Live Preview" icon. But, Brackets' built-in server can't handle files with a .php extension. That is where XAMPP comes in.</p>
+				<p>We can open the web pages in Brackets just like normal. We can write our html, css, javascript just like normal. We can add PHP to the web page with no problems. But, when we want to test our PHP page(s) we must first start the XAMPP Apache server. When the server is running, then we can test the page.</p>
+				<p><em><strong>You will need to have the servers running while you are testing any web page with a .php extension and, once the value in the Project Settings dialog box is set, any web page.</strong></em></p>
+				<h2>Starting the Windows Apache Server</h2>
+				<ol>
+					<li>You must launch the XAMPP Control Panel <img src="../images/testing/win_control_icon.jpg" alt="win control icon" title="win control icon" width="44" height="44">.</li>
+					<li>This control is found inside the XAMPP folder on the C: drive.</li>
+					<li>Once the Windows Control Panel is open, click the "Start" button to the right of Apache.</li>
+					<li>If things work as expected, the background of the Apache text will turn green.</li>
+				</ol>
+				<p><img src="../images/testing/win_panel.jpg" alt="Win XAMPP Control Panel " title="Win XAMPP Control Panel "></p>
+				<h2>Starting the Mac Apache Server</h2>
+				<ol>
+					<li>You must launch the XAMPP manager-osx.app in the Applications folder <img src="../images/testing/mac_manager_icon.jpg" alt="Mac Manager Icon" title="Mac Manager Icon" width="52" height="46">.</li>
+					<li>Once the Mac Manager is open, click the "Manage Servers" tab.</li>
+					<li>Then click the "Apache Web Server" item in the list, then the "Start" button on the right.</li>
+					<li>If things work as expected, the status indicator to the left of the Apache Web Server will turn green.</li>
+				</ol>
+				<p><img src="../images/testing/mac_manager_window.jpg" alt="Mac XAMPP Manager Window" title="Mac XAMPP Manager Window"></p>
+				<h2>Shut Down the Server</h2>
+				<ol>
+					<li>When you are done testing, make sure to stop the server and quit the xampp application. Leaving it running uses computer resources and could be a potential security risk to your computer.</li>
+					<li>Don't Forget!</li>
+				</ol>
+				<h2>Project Setting Dialog</h2>
+				<p>When you open a file with a .php extension and work with it in Brackets and prepare to test it, the first time you click the Live Preview button, a Project Settings dialog box will open:</p>
+				<p><img src="../images/testing/project_settings.jpg" alt="XAMPP Project Settings" title="XAMPP Project Settings"></p>
+				<p>The dialog box wants to know the URL of the local server in order to run the page? The answer should be "<em><strong>http://localhost</strong></em>".</p>
+				<p>Type that into the text box in the dialog window. When done, click "Done".</p>
+				<p>If everything is working as it should, the page should load into the browser and you can see and test it.</p>
+				<h2>Editing or Clearing the Project Setting Dialog</h2>
+				<p>If you need to edit or change the Project Settings dialog box, it can be reopened from the File menu.</p>
+				<h2>Recommendation</h2>
+				<p>Once the Project Settings dialog box has been given a value, it will expect the Apache web server to be running whenever a live preview is run. If not, it will indicate that the "webpage is not available". It will be easier to:</p>
+				<ol>
+					<li><strong>Launch XAMPP and start the web server when you start Brackets.</strong></li>
+					<li><strong>Stop the web server and quit XAMPP when you quit Brackets.</strong></li>
+				</ol>
+				<br />Think of them as mutually dependent on one another.
+				<h2>Video Demonstration</h2>
+				<p>This video will demonstrate the Testing procedure described below.<strong><br /></strong></p>
+				<p></p>
+				<p>
+					<iframe width="420" height="315" src="https://www.youtube.com/embed/xiu4yRBbYeE" allowfullscreen></iframe>
+				</p>
+
+				<h2>Test it</h2>
+				<p>Before leaving this activity, let's make sure everything is working.</p>
+				<ol>
+					<li>Locate and launch the XAMPP application.</li>
+					<li>Start the Apache web server.</li>
+					<li>Open Brackets.</li>
+					<li>Locate the Franklin weather page.</li>
+					<li>Copy and paste the weather page into the same folder that it existed.</li>
+					<li>Rename the copy "franklin.php".</li>
+					<li>In the &lt;main&gt; element write the following:
+						<br /><strong>&nbsp; &nbsp; &nbsp;&lt;?php echo '&lt;h1&gt;This is PHP&lt;/h1&gt;'; ?&gt;</strong></li>
+					<li>Save the page.</li>
+					<li>Click the Live Preview icon in Brackets.</li>
+					<li>When the Project Settings dialog box opens, type the URL shown earlier in this document.</li>
+					<li>Click "Done".</li>
+					<li>The page should now open in the browser and somewhere in the main content area you should see an h1 heading of "This is PHP".</li>
+					<li>If everything worked then things are ready for you to proceed.</li>
+					<li>If things did not work, get some help or troubleshoot until they do.</li>
+					<li>When you are done, quit Brackets.</li>
+					<li>Stop the Apache Web server.</li>
+					<li>Quit XAMPP.</li>
+				</ol>
+
+			</article>
+		</main>
+		<footer id="footer">
+			<a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="//i.creativecommons.org/l/by-sa/3.0/88x31.png" /></a> All materials (except as noted) are by <a href="https://blainerobertson.net">Blaine Robertson</a> and licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">Creative Commons Attribution-ShareAlike 3.0 License</a>.</footer>
+	</div>
+	<script src="../js/course.min.js"></script>
+</body>
+
+</html>
