@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>jQuery Video Course Files | Web Frontend Development</title>
+	<meta name="description" content="The video files for the SitePoint Premium jQuery course are described and a download link provided for CIT 230">
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="../css/course.min.css">
+</head>
+
+<body>
+	<div id="main">
+		<header id="header">
+			<img src="../images/smallbanner.jpg" alt="CIT 230 Course Banner">
+		</header>
+		<main>
+			<article id="article">
+				<h1>jQuery Video Course Files</h1>
+				<hr>
+				<p>In order for you to follow along with the Introduction to jQuery video course you must download a zip containing all of the files used in the course using the link below:</p>
+				<a href="../downloads/intro-jquery-files.zip" title="Download the zip file" target="_blank">intro-jquery-files.zip</a>
+
+				<h2>Unzip and Move</h2>
+				<p>The download is a zip (compressed) file. You must unzip it and move the unzipped folder to your htdocs folder in order to follow along with the videos.</p>
+
+				<h2>Alterations Have Been Made</h2>
+
+				<p>In the videos you will see that the presenter is using jQuery version 1.x and in lessons 3, 4 and 5 the jQuery is being used from a CDN. I have slightly altered his code in two ways:</p>
+				<ol>
+					<li>I have included a "js" folder in all lesson folders that contains the downloaded jQuery 2.x file and the cdn.txt file from the <a href="jquery_adding.html" target="_blank" title="Opens in a new tab">jQuery: Adding it to a web page</a>&nbsp;activity.</li>
+					<li>I have replaced the call to the CDN version of jQuery 1.x in all web pages with a reference to the local version of jQuery 2.x.</li>
+				</ol>
+				<p>All other code seen in the videos remains the same and should work the same.</p>
+
+				<h2>Use This Code</h2>
+				<p>Please use the code provided by the download link above rather than downloading the files from the links in the videos.</p>
+
+				<h2>A Final Comment</h2>
+				<p>In the videos two script elements are used: 1) the script element including the jQuery library into the page and 2) the script where the jQuery code is being written. Both are in the head element of the web page. For demonstration purposes this makes the presentation easier.</p>
+
+				<p>However, to conform to the web development model the jQuery code should be written in an external javascript file, then referenced using a script element's "src" attribute to be made available to the html web page as shown below.</p>
+				<p><code>
+&nbsp; &nbsp; &nbsp; &lt;footer&gt;<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;h5&gt;&copy; Alcove Digital Systems | &lt;a href="#"&gt;Terms of Use&lt;/a&gt;&lt;/h5&gt;<br>
+&nbsp; &nbsp; &nbsp; &lt;/footer&gt;<br>
+&nbsp; &nbsp; &nbsp;&lt;/div&gt;&lt;!-- Close wrapper --&gt;<br>
+&nbsp; &nbsp; &nbsp;&lt;script src="js/jquery-2.2.1.min.js"&gt;&lt;/script&gt;<br>
+&nbsp; &nbsp; &nbsp;&lt;script src="js/jqscript.js"&gt;&lt;/script&gt;<br>
+&lt;/body&gt;<br>
+&lt;/html&gt;
+</code></p>
+
+				<p>In order to allow the html to load first, before waiting for the javascript code to load, both script elements: 1) to load the jQuery library (this must be first), and 2) to load our jQuery code would be placed near the bottom of the page as demonstrated in the <a href="jquery_adding.html" target="_blank" title="Opens in a new tab">jQuery: Adding it to a web page</a> activity and modeled above.</p>
+			</article>
+		</main>
+		<footer id="footer">
+			<a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="//i.creativecommons.org/l/by-sa/3.0/88x31.png" /></a> All materials (except as noted) are by <a href="https://blainerobertson.net">Blaine Robertson</a> and licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">Creative Commons Attribution-ShareAlike 3.0 License</a>.</footer>
+	</div>
+	<script src="../js/course.min.js"></script>
+</body>
+
+</html>
