@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>Review Weather JSON File | Web Frontend Development</title>
+	<meta name="description" content="Reviewing the weather.json file and its structure for CIT 230">
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="../css/course.min.css">
+</head>
+
+<body>
+	<div id="main">
+		<header id="header">
+			<img src="../images/smallbanner.jpg" alt="CIT 230 Course Banner">
+		</header>
+		<main>
+			<article id="article">
+				<h1>Weather.json Review</h1>
+				<hr>
+				<h2>Understand the Structure</h2>
+				<p>Hopefully, over the past two weeks you have come to understand that curly braces "{}" are used to represent JavaScript objects.</p>
+
+				<p>What you may not have realized is that objects within object, such as:</p>
+
+				<p><code>{<br>&nbsp; &nbsp; "Franklin": {<br>
+						&nbsp; &nbsp; &nbsp; &nbsp; "City": "Franklin",<br>
+						&nbsp; &nbsp; &nbsp; &nbsp; "State" : "ID",<br>
+						&nbsp; &nbsp; &nbsp; &nbsp; "High": 90,<br>
+						&nbsp; &nbsp; &nbsp; &nbsp; ...<br>
+						&nbsp; &nbsp; },</code></p>
+				<p><code>&nbsp; &nbsp; "Greenville": {<br>
+						&nbsp; &nbsp; &nbsp; &nbsp; "City": "Greenville",<br>
+						&nbsp; &nbsp; &nbsp; &nbsp; "State" : "SC",<br>
+						&nbsp; &nbsp; &nbsp; &nbsp; "High": 84,<br>
+						&nbsp; &nbsp; &nbsp; &nbsp; ...<br>
+						&nbsp; &nbsp; },</code></p>
+				<p><code>&nbsp; &nbsp; "Springfield": {<br>
+					&nbsp; &nbsp; &nbsp; &nbsp; "City": "Springfield",<br>
+					&nbsp; &nbsp; &nbsp; &nbsp; "State" : "IL",<br>
+					&nbsp; &nbsp; &nbsp; &nbsp; "High": 77,<br>
+					&nbsp; &nbsp; &nbsp; &nbsp; ...<br>
+					&nbsp; &nbsp; }<br>
+					&nbsp;}</code></p>
+
+				<p>are "<i><b>array-like</b></i>". This means they are not true arrays, but they can be treated as if they were. For example, if our object were assigned to a variable:</p>
+				<p><b>var data = {"Franklin":{...},"Greenville":{...},"Springfield":{...}};</b></p>
+				<p>We could access all of the Greenville object's data by using data[Greenville], this mimics the array-like syntax.</p>
+				<p>If we were to use regular javaScript object syntax we could just use the regular dot notation (e.g. data.Greenville).</p>
+
+				<h2>Mix and Match</h2>
+				<p>But what is really cool is that you can (doesn't mean you should) mix and match syntax. For example, to get the high for Springfield you could use:</p>
+				<p><strong>var high = data[Springfield].High;</strong></p>
+				<p>or</p>
+				<p><strong>var high = data.Springfield.High;</strong></p>
+				<p>or&nbsp;assume that the value of Springfield had been stored in a variable, (e.g. var cityName), that too can be used in the array structure (but <b>NOT</b>&nbsp;with the dot notation structure):</p>
+				<p><strong>var high = data[cityName].High;</strong></p>
+				<h2>Moving On</h2>
+				<p>One or more of these items will be useful in the next activity and in the assessment.</p>
+			</article>
+		</main>
+		<footer id="footer">
+			<a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="//i.creativecommons.org/l/by-sa/3.0/88x31.png" /></a> All materials (except as noted) are by <a href="https://blainerobertson.net">Blaine Robertson</a> and licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">Creative Commons Attribution-ShareAlike 3.0 License</a>.</footer>
+	</div>
+	<script src="../js/course.min.js"></script>
+</body>
+
+</html>
