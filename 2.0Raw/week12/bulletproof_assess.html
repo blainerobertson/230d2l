@@ -1,0 +1,125 @@
+<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="/favicon.ico" />
+<link rel="stylesheet" type="text/css" href="/Scripts/ext-3.0.0-2/resources/css/ext-all.css" />
+<link rel="stylesheet" type="text/css" href="/Styles_vv1D1B510E1A13E00.css" />
+<link rel="stylesheet" type="text/css" href="/StylesOld_vv1D1B510E1A13E00.css" />
+<!--[if IE 6]><link rel="stylesheet" type="text/css" href="/IE6Styles.css" /><![endif]-->
+<link rel="stylesheet" type="text/css" href="/resource/14853/byui-web/versions/app-version/1.8/app/styles/main.css" />
+<div class="page_color content" style="padding:10px;">
+	<div>&nbsp;</div>
+	<table border="5" cellspacing="5" cellpadding="20">
+		<tbody>
+			<tr>
+				<td bgcolor="e9e5d0" width="100%" height="50">
+					<div><img src="/Resource/47613513,0,0/Assets/CIT%20230%20png/CIT230LgBanner.jpg" border="0" alt="/Resource/47613513,0,0/Assets/CIT%20230%20png/CIT230LgBanner.jpg" title="/Resource/47613513,0,0/Assets/CIT%20230%20png/CIT230LgBanner.jpg" width="828" height="150" /></div>
+					<div style="padding: 16px;">
+						<div style="margin-left: 1em;">
+							<p><span style="font-size: 24pt; font-family: verdana, geneva; color: #800000;"><b><img src="/Resource/47613513,0,0/Assets/CIT%20230%20png/CIT230Assess.png" border="0" alt="/Resource/47613513,0,0/Assets/CIT%20230%20png/CIT230Assess.png" title="/Resource/47613513,0,0/Assets/CIT%20230%20png/CIT230Assess.png" width="400" height="87" /><br />Bulletproof the Site</b></span></p>
+							<p><span style="font-family: verdana, geneva;">In this week's activities you have reviewed event handlers, JSON data and used PHP to get weather data for three city pages. Now, the assessment is to use event handlers to capture events from the links in the navigation menu, keep the default action from taking place, capturing data, feed that data to the API and show the resulting JSON data in the page. Whew, that is a lot of things.</span></p>
+							<p><span style="color: #800000;"><b><span style="font-family: verdana, geneva; font-size: 18pt;">Bulletproofing?</span></b>
+								</span>
+							</p>
+							<p><span style="font-family: verdana, geneva;">When you think of bulletproof you probably think of protective clothing that soldiers or police officers wear. While that is true, another definition is, "<span class="dbox-italic"><span></span></span><span class="oneClick-link oneClick-available">safe</span>&nbsp;<span class="oneClick-link">from</span>&nbsp;<span class="oneClick-link oneClick-available">failure;</span>&nbsp;<span class="oneClick-link">without</span>&nbsp;<span class="oneClick-link oneClick-available">errors</span>&nbsp;<span class="oneClick-link">or</span>&nbsp;<span class="oneClick-link oneClick-available">shortcomings</span>&nbsp;<span class="oneClick-link">and&nbsp;</span><span class="oneClick-link">beyond</span>&nbsp;<span class="oneClick-link oneClick-available">criticism". (<a href="http://www.dictionary.com/browse/bulletproof" target="_blank" title="Opens in a new tab">Dictionary.com</a>)</span></span>
+							</p>
+							<p><span style="font-family: verdana, geneva;"><span class="oneClick-link oneClick-available">That is what we are doing, making sure that if JavaScript is working (thus jQuery will work too) then the gathering of weather data will be done using jQuery. But, if JavaScript is not working (turned off), the gathering of data will continue to work (in this case for our city pages).</span></span>
+							</p>
+							<div><span style="font-family: verdana, geneva; font-size: 18pt; color: #800000;"><b>Work with Someone</b></span></div>
+							<div><span style="font-family: verdana, geneva;"><b>As we have done before, you should complete this assessment with at least one other person and no more than 4 other people (5 maximum in a group). You will be required to report the name(s) of the person(s) you worked with.</b></span></div>
+							<p><span style="color: #800000;"><b><span style="font-family: verdana, geneva; font-size: 18pt;"><span class="oneClick-link oneClick-available">Copy the remote_wu.js File</span></span>
+								</b>
+								</span>
+							</p>
+							<ol>
+								<li><span style="font-family: verdana, geneva;">Make a copy of the remote_wu.js file and name the copy "remote_wu_bp.js".</span></li>
+								<li><span style="font-family: verdana, geneva;">Save the copy into the scripts folder.</span></li>
+								<li><span style="font-family: verdana, geneva;">In the index.php page change the script element to point to the newly minted "remote_wu_bp.js" file, instead of the original "remote_wu.js" file.</span></li>
+							</ol>
+							<div><span style="color: #800000;"><b><span style="font-family: verdana, geneva; font-size: 18pt;">Write an Event Handler</span></b>
+								</span>
+							</div>
+							<div><span style="font-family: verdana, geneva;">All further work for this assessment will be done in the&nbsp;<span>"remote_wu_bp.js" file. No other pages or code will be changed except as noted in the "Collaboration" section below.&nbsp;</span></span><span style="font-family: verdana, geneva;">Using the resources mentioned in this and last week's activities, or any other resource, do the following:</span></div>
+							<div>
+								<ol>
+									<li><span style="font-family: verdana, geneva;">Write an event handler to detect when a link in the navigation bar is clicked.</span></li>
+									<li><span style="font-family: verdana, geneva;">Prevent the default behavior of the link from occurring.</span></li>
+									<li><span style="font-family: verdana, geneva;">Capture the text value of the link that was clicked and store it in a javaScript variable.</span></li>
+									<li><span style="font-family: verdana, geneva;">Use console.log() frequently to see what is happening in the "developer console" of the browser.</span></li>
+									<li><span style="font-family: verdana, geneva;">Write a jQuery AJAX function to read the data from the local weather.json file.</span></li>
+									<li><span style="font-family: verdana, geneva;">Remember the dataType is "json"</span></li>
+									<li><span style="font-family: verdana, geneva;">Upon a successful read of the data from the weather.json file capture the latitude and longitude for the city based upon which of the links was clicked on.</span></li>
+									<li><span style="font-family: verdana, geneva;">Call the getData function &nbsp;and pass in the longitude and latitude values captured from the local weather.json file.</span></li>
+									<li><span style="font-family: verdana, geneva;">When you believe you are done, test the functionality as outlined in the "Test" section below.</span></li>
+									<li><span style="font-family: verdana, geneva;">Continue working until the application behaves as explained in the "Test" section below.</span></li>
+								</ol>
+							</div>
+							<div><span style="font-family: verdana, geneva;"><span></span></span><span style="color: #800000;"><b><span style="font-family: verdana, geneva; font-size: 18pt;"><span class="oneClick-link oneClick-available">Test</span></span>
+								</b>
+								</span>
+							</div>
+							<ol>
+								<li><span style="font-family: verdana, geneva;">Save all your work and test in the local development environment.</span></li>
+								<li><span style="font-family: verdana, geneva;">When the index.php page is loaded the weather information for the current location should load.</span></li>
+								<li><span style="font-family: verdana, geneva;">When the navigation buttons are clicked the weather data for the remote location should load, but without leaving the index.php page (look at the address bar - cool, huh?!)</span></li>
+								<li><span style="font-family: verdana, geneva;">Using the Web Developer Toolbar, turn off JavaScript:<br /><img src="/Resource/47613513,0,0/Assets/Images/jquery/disable_javascript.png" border="0" alt="/Resource/47613513,0,0/Assets/Images/jquery/disable_javascript.png" title="/Resource/47613513,0,0/Assets/Images/jquery/disable_javascript.png" width="500" height="98" style="border: 2px solid black;" /><br /></span></li>
+								<li><span style="font-family: verdana, geneva;">Reload the page. No current location weather data will load.</span></li>
+								<li><span style="font-family: verdana, geneva;">Click one of the City navigation items.</span></li>
+								<li><span style="font-family: verdana, geneva;">The new page should load <b>AND</b> the weather data for that location should load (look at the address bar).</span></li>
+								<li><span style="font-family: verdana, geneva;">Re-enable javaScript.</span></li>
+								<li><span style="font-family: verdana, geneva;">Reload and click the "Current" item in the nav bar. The current location weather should load.&nbsp;</span></li>
+							</ol>
+							<div><span style="font-family: verdana, geneva;"><span style="font-family: verdana, geneva;"></span></span>
+								<div><span style="font-family: verdana, geneva; font-size: 18pt; color: #800000;"><b>Collaboration</b></span></div><span style="font-family: verdana, geneva;"></span>
+								<div><span style="font-family: verdana, geneva;">&nbsp;</span></div>
+								<div><span style="font-family: verdana, geneva;">You were required to collaborate with at least one, and no more than four, other class member(s) during this assessment. When you are done, add a second comment to the index.php page, beneath last week's comment, indicating who you worked with for this assessment. For example:</span></div><span style="font-family: verdana, geneva;"></span>
+								<div><span style="font-family: verdana, geneva;"><img src="/Resource/47613513,0,0/Assets/Images/jquery/collaboration_comment.png" border="0" alt="/Resource/47613513,0,0/Assets/Images/jquery/collaboration_comment.png" title="/Resource/47613513,0,0/Assets/Images/jquery/collaboration_comment.png" width="500" height="354" /></span></div>
+								<div><span>&nbsp;</span></div>
+							</div>
+							<div><span style="color: #800000;"><b><span style="font-family: verdana, geneva; font-size: 18pt;">Submit</span></b>
+								</span>
+							</div>
+							<div><span style="font-family: verdana, geneva;">When you are confident that things are working as they should:</span></div>
+							<div style="padding-left: 30px;"><span style="font-family: verdana, geneva;">1. Upload the index.php page </span></div>
+							<div style="padding-left: 30px;"><span style="font-family: verdana, geneva;">2. Upload the 3 city pages in the "views" folder.</span></div>
+							<div style="padding-left: 30px;"><span style="font-family: verdana, geneva;">3. Upload the remote_wu_bp.js file in the scripts folder.</span></div>
+							<div style="padding-left: 30px;"><span style="font-family: verdana, geneva;">4. Go to your temporary home page and click the link you made for last week's assessment, that points to the index.php&nbsp;page in the jsonweather folder.</span></div>
+							<div style="padding-left: 30px;"><span style="font-family: verdana, geneva;">5. Test everything again on the remote server just as you did in the "Test" section above to make sure it works the same on the remote server as it did in the local environment.</span></div>
+							<div style="padding-left: 30px;"><span style="font-family: verdana, geneva;">6. If things work, submit the time email, then you're done.</span></div>
+							<div style="padding-left: 30px;"><span style="font-family: verdana, geneva;">7. If things do not work, troubleshoot until they do.</span></div>
+							<p><span style="color: #800000;"><b><span style="font-family: verdana, geneva; font-size: 18pt;"><span class="oneClick-link oneClick-available">Send the Email</span></span>
+								</b>
+								</span>
+							</p>
+							<p><span style="font-family: verdana, geneva;"><span class="oneClick-link oneClick-available">You were asked to track your time to complete everything for this week. Please send the email with your time (in hours) to robertsonb@byui.edu so you can receive credit for doing so.</span></span>
+							</p>
+							<p><span style="color: #800000;"><b><span style="font-family: verdana, geneva; font-size: 18pt;"><span class="oneClick-link oneClick-available">Grading Matrix</span></span>
+								</b>
+								</span>
+							</p>
+							<p><span style="color: #800000;"><b><span style="font-family: verdana, geneva; font-size: 14pt;"><span class="oneClick-link oneClick-available">Objective 5 (45 points)</span></span>
+								</b>
+								</span>
+							</p>
+							<ol>
+								<li><span style="font-family: verdana, geneva;">The index page loads the current weather conditions when javaScript is enabled. - 3 points</span></li>
+								<li><span style="font-family: verdana, geneva;">Navigation bar links to the Franklin, Greenville and Springfield pages load the respective weather data for all three cities into the index.php page and do not actually navigate away from the index page when javaScript is enabled. - 20 points</span></li>
+								<li><span style="font-family: verdana, geneva;">With JavaScript disabled, the index page does not load any weather data. - 2 points</span></li>
+								<li><span style="font-family: verdana, geneva;">With JavaScript disabled, navigation links navigate to the respective weather page and the weather data for that page is loaded. - 15 points (5 points per city page)</span></li>
+								<li><span style="font-family: verdana, geneva;">View the "remote_wu_bp.js" file to confirm the onclick event handler is present and appears viable. - 5 points</span></li>
+							</ol>
+							<div><span style="color: #800000;"><b><span style="font-family: verdana, geneva; font-size: 14pt;">Objective 6 (15 points)</span></b>
+								</span>
+							</div>
+							<div>
+								<ol>
+									<li><span style="font-family: verdana, geneva;">View the source code for the index.php page, the names of collaborators is shown for the assessment. - 5 points</span></li>
+									<li><span style="font-family: verdana, geneva;">With JavaScript disabled, navigate to any of the city pages. The names of collaborators for the PHP Weather data activity are listed. - 5 points</span></li>
+									<li><span style="font-family: verdana, geneva;">An email was received with the time needed reported for the week. - 5 points</span></li>
+								</ol>
+							</div>
+							<div><span style="font-family: verdana, geneva;">&nbsp;</span></div>
+						</div><span style="font-family: verdana,geneva; color: #000000;"> <span style="font-size: 12pt;"> <i> <b> Click on the &ldquo;Mark this activity complete&rdquo; button below when everything is completed, submitted and tested.</b></i></span></span>
+					</div>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
