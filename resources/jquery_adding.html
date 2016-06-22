@@ -22,8 +22,8 @@
 				<h2>Version, versions, versions</h2>
 				<ol>
 					<li>On the jQuery.com home page, find and click the large button to "Download jQuery".</li>
-					<li>Scroll down until you find the heading for jQuery 2.x.</li>
-					<li>You will find options "compressed, production jQuery 2.2.1" and "uncompressed, development jQuery 2.2.1".</li>
+					<li>Scroll down until you find the heading for jQuery 3.x.</li>
+					<li>You will find options "compressed, production jQuery 3.0.0" and "uncompressed, development jQuery 3.0.0".</li>
 					<li>What's the difference you may ask?</li>
 					<ol>
 						<li>The "compressed" version has had all comments and spaces removed and variables have been shortened. Doing these things makes the code practically unreadable to humans, but computers can read the file just fine. It also makes the file smaller (86kb).</li>
@@ -50,17 +50,6 @@
 						<li>The jQuery library is compressed as well as minified and thus weighs even less.</li>
 					</ol>
 				</ol>
-				<h2>Size Comparison</h2>
-				<p>I ran a test downloading JQuery version 2.2.1 (minified) from all CDN's listed on jQuery.com. Here is the size of the file as reported using YSlow:</p>
-
-				<ul>
-					<li>Local delivery (non-CDN): 85.5K</li>
-					<li>jQuery CDN: 34.9K</li>
-					<li>Microsoft CDN: 38.4K</li>
-					<li>CDNJS CDN: 85.6K</li>
-					<li>Google CDN: 29.8K (version was 2.2.0)</li>
-					<li>jsDelivr CDN: 85.6K</li>
-				</ul>
 
 				<h2>Okay, which one do I use?</h2>
 				<p>The answer is, <b>"Y</b><b>ou want two"</b>. You want one that you can use for testing and development when you are not connected to the Internet - this will be the library that you will <i><b>download and store on your own machine</b></i>. You will want another one to actually use in your web pages, when they are being used in your hosting environment - this will be the <b><i>copy gotten from the CDN</i></b>.</p>
@@ -86,12 +75,12 @@
 						</li>
 					</ol>
 					<li>Return to the jQuery download page in your browser.</li>
-					<li>Scroll until you find the heading "jQuery 2.x".</li>
-					<li>Right-click the "Download the compressed, production jQuery 2.2.1" link and choose "Save link as...".</li>
+					<li>Scroll until you find the heading "jQuery 3.0".</li>
+					<li>Right-click the "Download the compressed, production jQuery 3.0.0" link and choose "Save link as...".</li>
 					<li>When the dialog box opens, save the file to new folder created in step 1.</li>
 					<li>Next, scroll down to the "Using jQuery with a CDN" heading.</li>
 					<li>Choose one of the CDN's and click its link.</li>
-					<li>Once there, look for jQuery version 2.2.1, with "min" in the name. (e.g. https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js) and copy the whole line.</li>
+					<li>Once there, look for jQuery version 3.0.0, with "min" in the name. (e.g. https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js) and copy the whole line.</li>
 					<li>Return to Brackets and paste the path into the cdn.txt file. Save the file.</li>
 					<li>You now have the path that you will put into your web pages.</li>
 				</ol>
@@ -105,9 +94,9 @@
 &nbsp; &nbsp; &lt;/footer&gt;
 &nbsp;&lt;/div&gt;&lt;!-- Closes wrapper --&gt;
 &lt;!-- Use for Production Server --&gt;
-&nbsp;&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"&gt;&lt;/script&gt;
+&nbsp;&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"&gt;&lt;/script&gt;
 &nbsp;&lt;!-- Use for Local Development --&gt;
-&nbsp; &nbsp;&lt;script src="js/jquery-2.2.1.min.js"&gt;&lt;/script&gt;
+&nbsp; &nbsp;&lt;script src="js/jquery-3.0.0.min.js"&gt;&lt;/script&gt;
 &lt;/body&gt;
 &lt;/html&gt;
 </code></pre>
@@ -119,9 +108,9 @@
 &nbsp; &nbsp; &lt;/footer&gt;
 &nbsp;&lt;/div&gt;&lt;!-- Closes wrapper --&gt;
 &lt;!-- Use for Production Server --&gt;
-&nbsp;&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"&gt;&lt;/script&gt;
+&nbsp;&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"&gt;&lt;/script&gt;
 &nbsp;&lt;!-- Use for Local Development --&gt;
-&nbsp;&lt;!--&nbsp;&lt;script src="js/jquery-2.2.1.min.js"&gt;&lt;/script&gt;--&gt;
+&nbsp;&lt;!--&nbsp;&lt;script src="js/jquery-3.0.0.min.js"&gt;&lt;/script&gt;--&gt;
 &lt;/body&gt;
 &lt;/html&gt;
 </code></pre>
@@ -131,9 +120,9 @@
 &nbsp; &nbsp; &lt;/footer&gt;
 &nbsp;&lt;/div&gt;&lt;!-- Closes wrapper --&gt;
 &lt;!-- Use for Production Server --&gt;
-&lt;!--&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"&gt;&lt;/script&gt;--&gt;
+&lt;!--&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"&gt;&lt;/script&gt;--&gt;
 &nbsp;&lt;!-- Use for Local Development --&gt;
-&nbsp;&nbsp;&lt;script src="js/jquery-2.2.1.min.js"&gt;&lt;/script&gt;
+&nbsp;&nbsp;&lt;script src="js/jquery-3.0.0.min.js"&gt;&lt;/script&gt;
 &lt;/body&gt;
 &lt;/html&gt;
 </code></pre>
