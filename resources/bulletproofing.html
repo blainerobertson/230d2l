@@ -22,7 +22,7 @@
 				<p>In this week's activities you have reviewed event handlers, JSON data and used PHP to get weather data for three city pages. Now, the assessment is to use event handlers to capture events from the links in the navigation menu, keep the default action from taking place, capturing data, feed that data to the API and show the resulting JSON data in the page. Whew, that is a lot of things.</p>
 				<h2>Bulletproofing?</h2>
 				<p>When you think of bulletproof you probably think of protective clothing that soldiers or police officers wear. While that is true, another definition is, "safe from failure; without errors or shortcomings and beyond criticism". (<a href="http://www.dictionary.com/browse/bulletproof" target="_blank" title="Opens in a new tab">Dictionary.com</a>)</p>
-				<p>That is what we are doing, making sure that if JavaScript is working (thus jQuery will work too) then the gathering of weather data will be done using jQuery. But, if JavaScript is not working (turned off), the gathering of data will continue to work (in this case for our city pages).</p>
+				<p>That is what we are doing, making sure that if JavaScript is working (thus jQuery will work too) then the gathering of weather data will be done using jQuery. But, if JavaScript is not working (turned off), the gathering of data will continue to work (in this case for our city pages) using PHP in the city pages (completed in the PHP activity for this week).</p>
 				<h2>Work with Someone</h2>
 				<p>As we have done before, you should complete this assessment with at least one other person and no more than 4 other people (5 maximum in a group). You will be required to report the name(s) of the person(s) you worked with.</p>
 				<h2>Copy the remote_wu.js File</h2>
@@ -39,10 +39,10 @@
 					<li>Prevent the default behavior of the link from occurring.</li>
 					<li>Capture the text value of the link that was clicked and store it in a javaScript variable.</li>
 					<li>Use console.log() frequently to see what is happening in the "developer console" of the browser.</li>
-					<li>Write a jQuery AJAX function to read the data from the local weather.json file.</li>
+					<li>Write a jQuery AJAX function to read the data from the local weather.json file for the city whose link was clicked.</li>
 					<li>Remember the dataType is "json"</li>
-					<li>Upon a successful read of the data from the weather.json file capture the latitude and longitude for the city based upon which of the links was clicked on.</li>
-					<li>Call the getData function and pass in the longitude and latitude values captured from the local weather.json file.</li>
+					<li>Upon a successful read of the data from the weather.json file capture the latitude and longitude from the city's data object.</li>
+					<li>Call the getData function and pass in the longitude and latitude values.</li>
 					<li>When you believe you are done, test the functionality as outlined in the "Test" section below.</li>
 					<li>Continue working until the application behaves as explained in the "Test" section below.</li>
 				</ol>
