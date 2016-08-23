@@ -1,0 +1,109 @@
+<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="/favicon.ico" />
+<link rel="stylesheet" type="text/css" href="/Scripts/ext-3.0.0-2/resources/css/ext-all.css" />
+<link rel="stylesheet" type="text/css" href="/Styles_vv1D1B510E1A13E00.css" />
+<link rel="stylesheet" type="text/css" href="/StylesOld_vv1D1B510E1A13E00.css" />
+<!--[if IE 6]><link rel="stylesheet" type="text/css" href="/IE6Styles.css" /><![endif]-->
+<link rel="stylesheet" type="text/css" href="/resource/14853/byui-web/versions/app-version/1.8/app/styles/main.css" />
+<div class="page_color content" style="padding:10px;">
+	<div>&nbsp;</div>
+	<table border="5" cellspacing="5" cellpadding="20">
+		<tbody>
+			<tr>
+				<td bgcolor="e9e5d0" width="100%" height="50">
+					<div><img src="/Resource/47613513,0,0/Assets/CIT%20230%20png/CIT230LgBanner.jpg" border="0" alt="/Resource/47613513,0,0/Assets/CIT%20230%20png/CIT230LgBanner.jpg" title="/Resource/47613513,0,0/Assets/CIT%20230%20png/CIT230LgBanner.jpg" width="828" height="150" /></div>
+					<div style="padding: 16px;">
+						<div style="margin-left: 1em;">
+							<p><span style="font-size: 24pt; font-family: verdana, geneva; color: #800000;"><img src="/Resource/47613513,0,0/Assets/CIT%20230%20png/CIT230Activityl.png" border="0" alt="/Resource/47613513,0,0/Assets/CIT%20230%20png/CIT230Activityl.png" title="/Resource/47613513,0,0/Assets/CIT%20230%20png/CIT230Activityl.png" width="400" height="87" style="background-color: #ffffff;" /></span></p>
+							<p><span style="font-size: 24pt; font-family: verdana, geneva; color: #800000;"><b>Use PHP for Weather Data</b></span></p>
+							<p><span style="font-family: verdana, geneva; font-size: 12pt;">In last week's activity you visited the Weather Underground API documentation, in particular, you were asked to visit two pages:</span></p>
+							<ul>
+								<li><span style="font-family: verdana, geneva;"><a href="http://www.wunderground.com/weather/api/d/docs?d=resources/code-samples" target="_blank" title="Opens in a new tab">Code Samples page</a> - example code for using varying technologies to get weather data</span></li>
+								<li><span style="font-family: verdana, geneva;"><a href="http://www.wunderground.com/weather/api/d/docs?d=data/geolookup#feature__geolookup" target="_blank" title="Opens in a new tab">Geolookup page</a> - examples of requesting data in a variety of ways are shown at the bottom of the page.</span></li>
+							</ul>
+							<div><span style="color: #800000;"><b><span style="font-family: verdana, geneva; font-size: 18pt;">Work with Someone</span></b>
+								</span>
+							</div>
+							<div><b><span style="font-family: verdana, geneva;">As we have done before, you should complete this activity and the assessment with at least one other person and no more than 4 other people (5 maximum in a group). You will be required to report the name(s) of the person(s) you worked with.</span></b></div>
+							<div><span style="font-family: verdana, geneva;">&nbsp;</span></div>
+							<div><span style="color: #800000;"><b><span style="font-family: verdana, geneva; font-size: 18pt;">The Task</span></b>
+								</span>
+							</div>
+							<div><span style="font-family: verdana, geneva;">In this activity you are going to use data from the weather.json file and the PHP code sample from the wunderground API to get the weather data for the respective city pages in the jsonweather folder, downloaded last week.</span></div>
+							<div><span style="font-family: verdana, geneva;">&nbsp;</span></div>
+							<div><span style="color: #800000;"><b><span style="font-family: verdana, geneva; font-size: 18pt;">Outcome</span></b>
+								</span>
+							</div>
+							<div><span style="font-family: verdana, geneva;">The idea is to retrieve the same information for each of the city pages as you did in last week's assessment for the current location page: city and state names, current temperature, current condition and the other two required pieces of weather data that you chose to include (if you chose more than two, include all of the same ones that you did use last week).</span></div>
+							<div><span style="font-family: verdana, geneva;">&nbsp;</span></div>
+							<div><span style="color: #800000;"><b><span style="font-family: verdana, geneva; font-size: 18pt;">Setup and Test</span></b>
+								</span>
+							</div>
+							<div>
+								<ol>
+									<li><span style="font-family: verdana, geneva;">Start with one of the weather pages (your choice).</span></li>
+									<li><span style="font-family: verdana, geneva;">Create a PHP code block on line 1 "&lt;?php &nbsp;?&gt;" of the file</span></li>
+									<li><span style="font-family: verdana, geneva;">Make sure the doctype declaration is on line 2.</span></li>
+									<li><span style="font-family: verdana, geneva;">Within the PHP code block, create some empty lines so you have room to work.</span></li>
+									<li><span style="font-family: verdana, geneva;">Go the <a href="http://www.wunderground.com/weather/api/d/docs?d=resources/code-samples&amp;MR=1" target="_blank" title="Opens in a new tab">wunderground code sample</a> page and copy the PHP sample.</span></li>
+									<li><span style="font-family: verdana, geneva;">Return to the city page you are working in and paste the example code.</span></li>
+									<li><span style="font-family: verdana, geneva;">Remove any extra opening (&lt;?php) or closing (?&gt;) PHP code block tags.</span></li>
+									<li><span style="font-family: verdana, geneva;">From the weather.json file select either the name and state, or longitude and latitude values and use them in the URL string as needed to make a make a request to the wunderground API as seen in the <a href="http://www.wunderground.com/weather/api/d/docs?d=data/geolookup&amp;MR=1#city_within_the_usa" target="_blank" title="Opens in a new tab">geolookup examples</a>&nbsp;for whichever option you choose to use.</span></li>
+									<li><span style="font-family: verdana, geneva;">Remember to add your own API key to the URL string.</span></li>
+									<li><span style="font-family: verdana, geneva;">Add an "exit;" statement on the first empy line after the sample PHP code that you pasted into the weather page so that you can see the result of the PHP request for weather data.</span></li>
+									<li><span style="font-family: verdana, geneva;">Save the file.</span></li>
+									<li><span style="font-family: verdana, geneva;">Make sure your local server is running and click the "Live Preview" button in Brackets.</span></li>
+									<li><span style="font-family: verdana, geneva;">If everything is working, you should now see the line of data on your screen that says, "Current temperature in [city name] is: [temperature value] (with the real name and temperature instead of the text).</span></li>
+									<li><span style="font-family: verdana, geneva;">If things worked you are ready for the next step, if not do some troubleshooting until they do work.</span></li>
+									<li><span style="font-family: verdana, geneva;">Remove or comment out (//) the lines with echo <b><i>"Current temperature...."</i></b> and <b>exit; </b>so that they no longer work.<br /></span></li>
+								</ol>
+								<div><span style="color: #800000;"><b><span style="font-family: verdana, geneva; font-size: 18pt;">Data to the Page</span></b>
+									</span>
+								</div>
+								<div>
+									<ol>
+										<li><span style="font-family: verdana, geneva;">Using the code in the PHP example taken from weather underground as an example, get the rest of the data that you used last week.</span></li>
+										<ol>
+											<li><span style="font-family: verdana, geneva;">You already have the city name ($location) and the current temperature ($temp_f).</span></li>
+											<li><span style="font-family: verdana, geneva;">You will need the state, current condition and the other items you used last week.</span></li>
+										</ol>
+										<li><span style="font-family: verdana, geneva;">Assign the values to <a href="http://www.w3schools.com/php/php_variables.asp" target="_blank" title="Opens in a new tab">PHP variables</a> ($variable_name), just as exemplified in the example PHP code.</span></li>
+										<li><span style="font-family: verdana, geneva;">Once the variables are created and have values assigned to them, you will put them into the page.</span></li>
+										<li><span style="font-family: verdana, geneva;">Each variable will have to be placed inside of a PHP code block with an echo and the variable followed by a semi-colon (e.g. <b>&lt;?php &nbsp;echo $temp_f; ?&gt;</b>).</span></li>
+										<li><span style="font-family: verdana, geneva;">The various variables will be placed in the following locations:</span></li>
+										<ul>
+											<li><span style="font-family: verdana, geneva;">The city and state variables (separated by a comma and space) will need to be the first items in the title element.</span></li>
+											<li><span style="font-family: verdana, geneva;">These same variable will need to be placed inside the h1 with the id of "cityDisplay".</span></li>
+											<li><span style="font-family: verdana, geneva;">The current temperature variable will go into the list item with the id of "currentTemp".</span></li>
+											<li><span style="font-family: verdana, geneva;">The current condition variable will go inside the list item with the id of "summary".</span></li>
+											<li><span style="font-family: verdana, geneva;">The other weather items that you used last week will go in the same location as you used last week (you will have to add the list items and id's (refer to the index.php page for id names if needed).</span></li>
+										</ul>
+										<li><span style="font-family: verdana, geneva;">When placed, run the page and make sure everything works, showing all of the weather data in the correct location.</span></li>
+										<li><span style="font-family: verdana, geneva;">Add an "id" attribute to the body element on the page that has a value of the city name (e.g. &lt;body id="franklin"&gt;).</span></li>
+										<li><span style="font-family: verdana, geneva;">In the user_styles.css file write a css rule that will not display the div with an id of "status" if it is on the page with an ancestor with an id equal to what you wrote in item 7 above.</span></li>
+									</ol>
+								</div>
+							</div>
+							<div><span style="color: #800000;"><b><span style="font-family: verdana, geneva; font-size: 18pt;">An Example</span></b>
+								</span>
+							</div>
+							<div><span style="font-family: verdana, geneva;">When you are done, you should see something that resembles the image below (your added data may be different than what is shown).</span></div>
+							<div><span style="font-family: verdana, geneva;">&nbsp;<img src="/Resource/47613513,0,0/Assets/Images/jquery/php_sample.png" border="0" alt="/Resource/47613513,0,0/Assets/Images/jquery/php_sample.png" title="/Resource/47613513,0,0/Assets/Images/jquery/php_sample.png" width="500" height="393" /></span></div>
+							<div><span style="font-family: verdana, geneva;">&nbsp;</span></div>
+							<div><span style="font-size: 18pt; color: #800000;"><b><span style="font-family: verdana, geneva;">Repeat</span></b>
+								</span>
+							</div>
+							<div><span style="font-family: verdana, geneva;">With one city page done, repeat the same process with the other two city pages (NOT the index.php page).</span></div>
+							<div><span style="font-family: verdana, geneva;">When done, you should be able to click the various navigation links to move between the cities and see the weather data update to reflect that city's weather.</span></div>
+							<div><span style="font-family: verdana, geneva;">&nbsp;</span></div>
+							<div><span style="color: #800000;"><b><span style="font-family: verdana, geneva; font-size: 18pt;">List the Names</span></b>
+								</span>
+							</div>
+							<div><span style="font-family: verdana, geneva;">When done and all of the city pages are working, add additional list items to the bottom of the "current_conditions" unordered list. Place your name in the first of the additional list items and the names of the others in additional list items. Add these to all of the city pages.</span></div>
+							<div><span style="font-family: verdana, geneva;">&nbsp;</span></div>
+						</div><span style="font-family: verdana,geneva; color: #000000;"> <span style="font-size: 12pt;"> <i> <b> Click on the &ldquo;Mark this activity complete&rdquo; button below when all work for this activity is complete.</b></i></span></span>
+					</div>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>

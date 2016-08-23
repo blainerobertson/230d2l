@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>jQuery: Add to Web Pages | Web Frontend Development</title>
+	<meta name="description" content="An exercise for adding the jQuery library to web pages for CIT 230">
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="../css/course.min.css">
+</head>
+
+<body>
+	<div id="main">
+		<header id="header">
+			<img src="../images/smallbanner.jpg" alt="CIT 230 Course Banner">
+		</header>
+		<main>
+			<article id="article">
+				<h1>jQuery: Adding it to a web page</h1>
+				<hr>
+				<h2>Version, versions, versions</h2>
+				<ol>
+					<li>On the jQuery.com home page, find and click the large button to "Download jQuery".</li>
+					<li>Scroll down until you find the heading for jQuery 3.x.</li>
+					<li>You will find options "compressed, production jQuery 3.0.0" and "uncompressed, development jQuery 3.0.0".</li>
+					<li>What's the difference you may ask?</li>
+					<ol>
+						<li>The "compressed" version has had all comments and spaces removed and variables have been shortened. Doing these things makes the code practically unreadable to humans, but computers can read the file just fine. It also makes the file smaller (86kb).</li>
+						<li>The "uncompressed" version maintains spaces, comments and full variable names to make it easier for humans to read. This adds to its weight however leaving a file that weighs 259kb.</li>
+					</ol>
+					<li>If you scroll down even further you will find a section entitled, "Using jQuery with a CDN".</li>
+					<ol>
+						<li>You may ask, "What's a CDN?"</li>
+						<li>CDN stands for "Content Delivery Network". It is a network of servers scattered across the world that store files, including the jQuery library, and allow other computers to download those files when needed.</li>
+						<li>Because CDN's are distributed, and serve files constantly, they are very fast and may be closer to your site's visitor than your own server is.</li>
+						<li>This means that if you add code to your web page telling the browser to download jQuery from a CDN it will arrive faster and be lighter than what it would be if you put it on your own server.</li>
+					</ol>
+					<li>If you scroll down a bit further you will see that jQuery can be obtains from a number of CDNs:</li>
+					<ol>
+						<li>http://code.jquery.com - jQuery's own CDN</li>
+						<li>https://developers.google.com/speed/libraries/devguide#jquery - Google's CDN</li>
+						<li>http://www.asp.net/ajaxlibrary/cdn.ashx#jQuery_Releases_on_the_CDN_0 - Microsoft's CDN</li>
+						<li>http://cdnjs.com/libraries/jquery/ - a CDN popular with JavaScript resources</li>
+						<li>http://www.jsdelivr.com/#!jquery - another popular JavaScript-centric CDN</li>
+					</ol>
+					<li>There are two benefits to using a CDN:</li>
+					<ol>
+						<li>Typically the delivery of jQuery to the browser is faster</li>
+						<li>The jQuery library is compressed as well as minified and thus weighs even less.</li>
+					</ol>
+				</ol>
+
+				<h2>Okay, which one do I use?</h2>
+				<p>The answer is, <b>"Y</b><b>ou want two"</b>. You want one that you can use for testing and development when you are not connected to the Internet - this will be the library that you will <i><b>download and store on your own machine</b></i>. You will want another one to actually use in your web pages, when they are being used in your hosting environment - this will be the <b><i>copy gotten from the CDN</i></b>.</p>
+
+				<p>Having said that, if you will <b>always</b> be connected to the Internet, <b>always</b>, then you could get by with one - the one from the CDN.</p>
+
+				<h2>Alright then, Let's Do This</h2>
+
+				<ol>
+					<li>Begin by creating a "javascript" or "js" folder in your htdocs folder (follow the web naming rules).</li>
+					<ol>
+						<li>Open Brackets, make sure you are working in the "htdocs" folder.</li>
+						<li>In the left (Gray) panel, in empty space, right-click and select "New Folder".</li>
+						<li>Name the new folder and press your "Enter" or "Return" key.</li>
+					</ol>
+					<li>In the new folder create a "cdn.txt" file.</li>
+					<ol>
+						<li>In Brackets, right-click the newly created folder.</li>
+						<li>Click "New File".</li>
+						<li>Name the file, "cdn.txt", press "Enter" or "Return".</li>
+						<li>The file is named and a blinking cursor appears in the new, empty file.
+							<br />
+						</li>
+					</ol>
+					<li>Return to the jQuery download page in your browser.</li>
+					<li>Scroll until you find the heading "jQuery 3.0".</li>
+					<li>Right-click the "Download the compressed, production jQuery 3.0.0" link and choose "Save link as...".</li>
+					<li>When the dialog box opens, save the file to new folder created in step 1.</li>
+					<li>Next, scroll down to the "Using jQuery with a CDN" heading.</li>
+					<li>Choose one of the CDN's and click its link.</li>
+					<li>Once there, look for jQuery version 3.0.0, with "min" in the name. (e.g. https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js) and copy the whole line.</li>
+					<li>Return to Brackets and paste the path into the cdn.txt file. Save the file.</li>
+					<li>You now have the path that you will put into your web pages.</li>
+				</ol>
+				<h2>Getting jQuery into a Web Page</h2>
+
+
+				<p>When the time comes you will want to add the code to insert jQuery into your web pages at the bottom of the page just before the closing body tag.</p>
+
+				<h3>Example:</h3>
+				<pre><code>
+&nbsp; &nbsp; &lt;/footer&gt;
+&nbsp;&lt;/div&gt;&lt;!-- Closes wrapper --&gt;
+&lt;!-- Use for Production Server --&gt;
+&nbsp;&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"&gt;&lt;/script&gt;
+&nbsp;&lt;!-- Use for Local Development --&gt;
+&nbsp; &nbsp;&lt;script src="js/jquery-3.0.0.min.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+				<p>Furthermore, you will want both paths present, but you will comment out one of them depending on if you are building and testing locally or uploading to the remote server.</p>
+
+				<h3>Local Version Commented Out</h3>
+				<pre><code>
+&nbsp; &nbsp; &lt;/footer&gt;
+&nbsp;&lt;/div&gt;&lt;!-- Closes wrapper --&gt;
+&lt;!-- Use for Production Server --&gt;
+&nbsp;&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"&gt;&lt;/script&gt;
+&nbsp;&lt;!-- Use for Local Development --&gt;
+&nbsp;&lt;!--&nbsp;&lt;script src="js/jquery-3.0.0.min.js"&gt;&lt;/script&gt;--&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+				<h3>Production Version Commented Out</h3>
+				<pre><code>
+&nbsp; &nbsp; &lt;/footer&gt;
+&nbsp;&lt;/div&gt;&lt;!-- Closes wrapper --&gt;
+&lt;!-- Use for Production Server --&gt;
+&lt;!--&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"&gt;&lt;/script&gt;--&gt;
+&nbsp;&lt;!-- Use for Local Development --&gt;
+&nbsp;&nbsp;&lt;script src="js/jquery-3.0.0.min.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+			</article>
+		</main>
+		<footer id="footer">
+			<a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="//i.creativecommons.org/l/by-sa/3.0/88x31.png" /></a> All materials (except as noted) are by <a href="https://blainerobertson.net">Blaine Robertson</a> and licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">Creative Commons Attribution-ShareAlike 3.0 License</a>.</footer>
+	</div>
+	<script src="../js/course.min.js"></script>
+</body>
+
+</html>

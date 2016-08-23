@@ -8,6 +8,11 @@
 	<meta name="description" content="Syllabus for CIT 230 - Web Frontend Development">
 	<meta name="viewport" content="width=device-width">
 	<link rel="stylesheet" href="../css/course.css">
+	<style>
+		#gradetable td {
+			width: 80px;
+		}
+	</style>
 </head>
 
 <body>
@@ -19,9 +24,9 @@
 			<article id="article">
 				<h1>CIT 230 -&nbsp;Web Frontend Development</h1>
 				<hr>
-				<p>In this course we will jump right into HTML, CSS and other web development basics. There is a lot to learn quickly. If you are new to web development, especially HTML and CSS, you might consider taking WDD 100 to help you prepare for this course. WDD 100 is not required for CIT 230, but it will help you be prepared. In addition, about 2/3 of students have had or are taking a programming course (CIT 160) - this seems to make a difference in their success.</p>
+				<p>In this course we will jump right into HTML, CSS and other web development basics. There is a lot to learn quickly. If you are new to web development, especially HTML and CSS, you might consider taking WDD 100 to help you prepare for this course. WDD 100 is not required for CIT 230, but it will help you be prepared. In addition, about 2/3 of students have had or are taking a programming course (CIT 160) - this seems to make a difference in their success in this course.</p>
 
-				<p class="callout">This is a technical class, not a design class. It will require between 9-12 hours per week. Even though it may be challenging, you will be successful as long as you are diligent and work hard. You are strongly encouraged to collaborate with your classmates in order to support and help one another.</p>
+				<p class="callout">This is a technical class, not a design class. It will require between 9-12 hours per week. Even though it may be challenging, you will be successful as long as you are diligent and work hard. You are strongly encouraged, and will be required in some instances, to collaborate with your classmates in order to support and help one another.</p>
 
 				<h2>Purpose</h2>
 				<p>When building web sites, successful web developers must consider all of the following: audience, organization, interface, usability, content, layout, and visual (aesthetic) design. This course will teach you to plan, design, and construct web sites to work properly in modern web browsers and conform to web standards while following best practices.</p>
@@ -29,6 +34,7 @@
 				<p>To be successful in this course you will need to have the following:</p>
 				<ul>
 					<li>Strong work ethic</li>
+					<li>Ability to learn and apply what you learn</li>
 					<li>Ability to solve problems</li>
 					<li>Ability to meet deadlines</li>
 					<li>Ability to work well with others &mdash; supporting, communicating, teaching, and learning from them</li>
@@ -37,34 +43,16 @@
 				<p>To be successful in this course you&rsquo;ll need the following:</p>
 				<ul>
 					<li>A computer with 8GB of RAM (recommended), 64-bit operating system, and wireless capability.</li>
-					<li>A domain name (your own name is recommended) and web hosting account to be maintained throughout the semester.</li>
-				</ul>
-				<ul>
-					<li>Code editor &mdash; <a title="Download Brackets - link opens in a new tab" href="http://brackets.io/" target="_blank">Brackets text editor</a>&nbsp;(free software for Mac and Windows).</li>
-					<li>FTP client &mdash; <a href="http://filezilla-project.org/download.php">Filezilla</a> recommended (free software for Mac and Windows).</li>
+					<li>Code editor &mdash; <a title="Download Brackets - link opens in a new tab" href="http://brackets.io/" target="_blank">Brackets text editor</a>&nbsp;(free software for Mac and Windows) is recommended.</li>
+					<li>GitHub account and Desktop Client &mdash; To store and manage web resources for the course. Will be introduced in week 2 of the course.</li>
 					<li>SitePoint Premium annual account, cost is $10 (will be charged automatically to your school account - no need to pay anything up front) and includes books, video courses and screencasts. Use these directions to sign up for&nbsp;<a title="Sign-up for a SitePoint Premium membership - link opens in a new tab" href="../resources/sitepoint_premium.html" target="_blank">SitePoint Premium</a> and <strong>use your BYU-Idaho email address</strong>.</li>
 				</ul>
-				<h2>Hosting</h2>
-				<p>Students are responsible for acquiring a domain name (your own name is recommended) and professional web hosting from a provider of their choice. Previous students have had success with these companies:&nbsp;<a href="http://stats.justhost.com/track?c31b8be21a8ea1de7516b3cb569c3210e">JustHost.com</a>,&nbsp;<a href="http://www.hostmonster.com/track/blainerobertson/tellmemore?page=tell_me_more.html">Hostmonster.com&nbsp;</a>or&nbsp;<a href="http://www.bluehost.com/track/UP/BYUI">Bluehost.com&nbsp;</a>. Each of these hosting companies provide a free domain name with purchased hosting.&nbsp;</p>
-				<p>Hosting must be maintained for the duration of the course, although most providers will discount prices for longer periods. You will be able to use the hosting services in other classes.</p>
-
-				<div class="callout">
-					<p><strong>Note:</strong> A hosting provider must meet the following requirements:</p>
-					<ol>
-						<li>Linux-based</li>
-						<li>Supports PHP 5.5 or greater</li>
-						<li>Supports sub-domains</li>
-						<li>Provides live customer support</li>
-						<li>Has unlimited bandwidth</li>
-						<li>Has large storage (more than 10 GB is recommended)</li>
-					</ol>
-				</div>
 
 				<h2>Course Objectives</h2>
 				<p>These objectives are based on web standards and best practices to help you be successful in the future.</p>
 				<ol>
-					<li>Develop web pages that are&nbsp;<a title="Read about semantics on html5doctor.com" href="http://html5doctor.com/lets-talk-about-semantics/" target="_blank">semantically</a>&nbsp;accurate using the HTML5 markup language.</li>
-					<li>Style web pages using Cascading Style Sheet (CSS) level 3 and avoid all HTML presentational markup.</li>
+					<li>Develop web pages that are <a title="Read about semantics on html5doctor.com" href="http://html5doctor.com/lets-talk-about-semantics/" target="_blank">semantic</a> and valid using the HTML5 markup language.</li>
+					<li>Style web pages with valid Cascading Style Sheets (CSS) level 3 and avoid all HTML presentational markup.</li>
 					<li>Provide content that is visually appropriate, usable, and findable to humans and machines.</li>
 					<li>Plan, design, and develop web pages and sites according to best practices of organization and maintainability.</li>
 					<li>Work with JavaScript to handle events and interactions within the browser.</li>
@@ -100,7 +88,7 @@
 				<h2>Weather Site [All Objectives]</h2>
 				<p>For approximately 10 weeks we will construct a weather related site in order to learn and practice building a web site using a variety of technologies. You will have set documents that you will submit for assessments. The weather site is intended to lay a foundation of skills that will then be applied to your own project.</p>
 
-				<h2>Web Site Project [Objectives&mdash;all]</h2>
+				<h2>Web Site Project [All Objectives]</h2>
 				<p>The <a href="/230d2l/project/requirements.html" title="Read the requirements for the web site project" target="_blank">Web Site Project</a> will be your major project for the course. It will require an implementation of all the skills and technologies covered by the course but on a <a href="/230d2l/project/project_proposal.html" title="Review the project proposal requirements" target="_blank">project of your own design</a>. This is a major aspect of the course and will require substantial time and effort.</p>
 
 				<h2>Getting Help</h2>
@@ -108,64 +96,64 @@
 				<ul>
 					<li>Learning Teams &mdash; This is a small group of your peers, enrolled in the same class, doing the same preparations, activities and assessments. You should interact with this group frequently &mdash; ask questions, share insights, read one another&rsquo;s work, make comments and suggestions. Learn how to work together and support one another. This is a very powerful and useful model &mdash; one that is used in the web design and development industry.&nbsp;</li>
 					<li>Weekly Support Forums &mdash; A discussion board is where you can ask and answer questions, ask for clarification and share insights (collaborate) with your peers. This is an avenue to maintain communications outside of class. The professor and the teaching assistants will monitor the board and offer help when appropriate. However, the primary intent is for class members to help one another using this tool. Don&rsquo;t underestimate the importance of these activities to your learning.</li>
-					<li>The Professor &mdash; Feel free to email your questions, or schedule a time to meet online.&nbsp;</li>
-					<li>Teaching Assistant &mdash; Online students are able to meet virtually with the campus TAs. &nbsp;Your instructor will provide TA contact information during the first few weeks of the class. On-campus students can drop by Smith 448 to visit with teaching assistants.</li>
+					<li>The Professor &mdash; Feel free to drop by during my <a href="https://web.byui.edu/Directory/Employee/robertsonb" title="View my office times in a new tab" target="_blank">office hours</a>, email me or visit with me in class.</li>
+					<li>Teaching Assistant &mdash; Your instructor will provide TA contact information during the first few weeks of the class. You can meet with our class TA or visit the open lab - STC 356 - to visit with teaching assistants to get help.</li>
 				</ul>
 
 				<h2>Grading</h2>
-				<p>Assessments are graded by the professor or teaching assistant (TA) and a score given for one or more course objectives. Passing course objectives, not the gross percentage shown in the grade book, determines the final course grade. Read about&nbsp;<a href="/230d2l/course/grading.html" title="Link opens in a new tab" target="_blank">how to check your grade</a>&nbsp;in class.</p>
+				<p>Assessments are graded by the professor or teaching assistant (TA) and a score given for each of the listed course objectives. Passing course objectives determines the final course grade. Read about <a href="/230d2l/course/grading.html" title="Link opens in a new tab" target="_blank">how to check your grade</a>&nbsp;in class.</p>
 				<p>At the conclusion of the course, each course objective is graded Pass/Fail. To pass an objective, you must earn at least 80% of the points allocated to it. It is critical that you are always doing your best work, on time and error free &mdash; do not submit junk! You must follow the directions to have work graded.</p>
-				<table border="1" cellspacing="0" cellpadding="0">
+				<table id="gradetable" border="1" cellspacing="0" cellpadding="0">
 					<tbody>
 						<tr>
-							<td width="80">
+							<td>
 								<p># of Objectives Passed</p>
 							</td>
-							<td width="80">
+							<td>
 								<p>6</p>
 							</td>
-							<td width="80">
+							<td>
 								<p>5</p>
 							</td>
-							<td width="80">
+							<td>
 								<p>4</p>
 							</td>
-							<td width="80">
+							<td>
 								<p>3</p>
 							</td>
-							<td width="80">
+							<td>
 								<p>2</p>
 							</td>
-							<td width="80">
+							<td>
 								<p>1</p>
 							</td>
-							<td width="80">
+							<td>
 								<p>0</p>
 							</td>
 						</tr>
 						<tr>
-							<td width="80">
+							<td>
 								<p>Grade Earned</p>
 							</td>
-							<td width="80">
+							<td>
 								<p>A</p>
 							</td>
-							<td width="80">
+							<td>
 								<p>B+</p>
 							</td>
-							<td width="80">
+							<td>
 								<p>B</p>
 							</td>
-							<td width="80">
-								<p>C+</p>
-							</td>
-							<td width="80">
+							<td>
 								<p>C</p>
 							</td>
-							<td width="80">
+							<td>
+								<p>C-</p>
+							</td>
+							<td>
 								<p>D</p>
 							</td>
-							<td width="80">
+							<td>
 								<p>F</p>
 							</td>
 						</tr>
@@ -197,9 +185,9 @@
 
 			</article>
 		</main>
-		<footer id="footer"></footer>
+		<footer id="footer">
+			<a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="//i.creativecommons.org/l/by-sa/3.0/88x31.png" /></a> All materials (except as noted) are by <a href="http://blainerobertson.net">Blaine Robertson</a> and licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">Creative Commons Attribution-ShareAlike 3.0 License</a></footer>
 	</div>
-	<!--	<script src="../js/course.js"></script>-->
 </body>
 
 </html>

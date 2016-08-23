@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>Create Responsive Images | Web Frontend Development</title>
+	<meta name="description" content="Creating Responsive Images for Responsive design for CIT 230">
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="../css/course.min.css">
+</head>
+
+<body>
+	<div id="main">
+		<header id="header">
+			<img src="../images/smallbanner.jpg" alt="CIT 230 Course Banner">
+		</header>
+		<main>
+			<article id="article">
+				<h1>Create Responsive Images</h1>
+				<hr>
+				<p>In the old days and, "Yes" still today, many website deliver a single content image to a web page on any device. While it is not bad, it could be better. The problem is that if your image is low resolution, it could look fine on a small screen and terrible on a large screen. If it is high resolution then it is great on high dpi (dots per inch) retina or other large screens, but is slow and eats up a huge amount of bandwidth when downloaded to a mobile device. In either of these scenarios, the user experience is less than ideal.</p>
+				<h2>Enter Responsive Images</h2>
+				<p>Responsive images are not images that respond to different user environments, rather it is a combination of html and css that delivers different images to the client browser based on their environment. In some instances, the browser makes the call (srcset with sizes) and in other cases the markup tells the browser which image to deliver (picture element). In either case, the client should have a better experience because of our fore-thought and planning.</p>
+				<h2>What is an Optimized Image?</h2>
+				<p>A simple question. Not so simple of an answer. An optimized image is one that 1) has a good pixel count for the screen it will be displayed on while 2) also trying to match the space it will get in the browser window and 3) remain as light-weight as possible to not gobble up bandwidth during the download. Let's see if we can illustrate all three:</p>
+				<h2>Pixel Count</h2>
+				<p>Image "A" is 400 pixels wide and 300 pixels tall. When "A" is displayed on a regular 92dpi monitor, it will display at around 4" wide by 3" high. When "A" is displayed on a retina 336dpi monitor, it will be just over 1" wide by .75" tall. Or, if forced to display at 4" by 3" the image will become grainy or "pixelated" and not look very pleasing.</p>
+				<h2>Display Space</h2>
+				<p>Image "B" is 2000 pixels wide and 1500 pixels high. Image "B" is going to be a content image to sit in a two column layout. The layout will never get larger than 1200 pixels wide. While the 2000 pixels of "B" will look great on a high resolution monitor, it will never actually be displayed larger than 600 pixels (1200 pixel maximum layout / 2 columns = 600 pixels per column). That means many of image "B"'s pixels are wasted.</p>
+				<h2>Light Weight</h2>
+				<p>Image "A" is a jpeg image with a quality setting of 80% (this means its quality has been reduced) in order to make it weigh in at 50Kb. Image "B" is also a jpeg with the same quality setting, but weighs in at 600kb. Image A is light-weight, but looks suspect on high resolution and large screens. Image "B" looks wonderful, but eats up a large amount of bandwidth while being delivered to the browser.</p>
+				<h2>What's the Answer?</h2>
+				<p>Simply put, we use different images (different versions of the same or different image(s)), and deliver the image to the browser that provides the best experience while trying to balance all three concerns mentioned above.</p>
+				<h2>Art Direction</h2>
+				<p>Art direction is a term used to ask, "What is the focus of the image?". If a bride and groom are in a flower garden, the focus or "Art Direction" is the bride and groom. If the image is going to be large, we could afford to include some of the surrounding flowers and landscape. But if the image has to be small (say for a mobile sized screen) then we crop out the background and focus on the people. Maybe even cropping the image to show them only from the waist up.</p>
+				<h2>Create the Images</h2>
+				<p>Download the <a href="../downloads/responsive_media.zip" title="Download the zip file (41Mb)" target="_blank">responsive_media.zip</a> file (~41Mb), if you have not done so already. In it is a folder named "raw-images". In it you will find a number of very large images. We always start big and then work down.</p>
+				<p>You are to create three types of images:</p>
+				<h2>Banners</h2>
+				<ol>
+					<li>Using the "grand-canyon.jpg" or "looking-down.jpg" image you are going to create three banners (one large, one medium, one small).</li>
+					<ol>
+						<li>The large should be about 1200 pixels wide and 200 pixels tall.</li>
+						<li>The medium should be about 800 pixels wide by 125 pixels tall.</li>
+						<li>The small should be about 400 pixels wide by 80 pixels tall.</li>
+					</ol>
+					<li>It is important that you don't simply resize the images (that will make them look strange). Instead crop the image to look like a banner, then resize the cropped version to the dimensions you want.</li>
+					<li>Save the finished banners to the "images" folder and indicate in the file name their size (e.g. banner_400.jpg).</li>
+				</ol>
+				<h2>Logos</h2>
+				<ol>
+					<li>Use the "nps-logo.png" file to create three logos (one large, one medium and one small).</li>
+					<ol>
+						<li>The large should be 150 pixels<strong> tall, not wide.</strong></li>
+						<li>The medium should be 100 pixels tall.</li>
+						<li>The small should be 50 pixels tall.</li>
+					</ol>
+					<li>Do NOT crop the logo, just resize it and leave it as a png file.</li>
+					<li>Save the finished logos to the "images" folder and indicate in the file name their size (e.g. logo_150.png).</li>
+				</ol>
+				<h2>Content Image</h2>
+				<ol>
+					<li>Use one or any combination of the other files to create three content images (one large, one medium, one small). These images will be placed into the html as an image related to the copy of the page (not really, but we will pretend).</li>
+					<li>The main element will never grow larger than 80% of the width of the largest screen and the content image will be about 50% of that.</li>
+					<li>Be sure you've read the text in this file prior to starting the activity to see what you should be considering as you make these images.</li>
+					<li>As you make the images progressively smaller, include art direction and focus on the main subject of the image.</li>
+					<li>As with the other images created, save the content images into the "images" folder and include a size indication in the name.</li>
+				</ol>
+				<h2>Use Pixlr</h2>
+				<p>If you have access to another image editor and you know how to use it, then go ahead and do so. If not, use Pixlr. I demonstrated, briefly, how to crop and resize images in my video found in the <a href="pixlr_install.html" title="See the pixlr install page" target="_blank">Installing Pixlr extension into Brackets</a> page. Refer to it if needed.</p>
+				<h2>What Next?</h2>
+				<p>When you have created your images, you are ready to optimize them. Move to the <a href="optimize_images.html" title="Open in a new tab" target="_blank">Optimize Images activity</a>.</p>
+
+			</article>
+		</main>
+		<footer id="footer">
+			<a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="//i.creativecommons.org/l/by-sa/3.0/88x31.png" /></a> All materials (except as noted) are by <a href="https://blainerobertson.net">Blaine Robertson</a> and licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">Creative Commons Attribution-ShareAlike 3.0 License</a>.</footer>
+	</div>
+	<script src="../js/course.min.js"></script>
+</body>
+
+</html>

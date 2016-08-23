@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title> | Web Frontend Development</title>
+	<meta name="description" content=" for CIT 230">
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="../css/course.min.css">
+</head>
+
+<body>
+	<div id="main">
+		<header id="header">
+			<img src="../images/smallbanner.jpg" alt="CIT 230 Course Banner">
+		</header>
+		<main>
+			<article id="article">
+				<h1>Use PHP for Weather Data</h1>
+				<hr>
+				<p>In last week's activity you visited the Weather Underground API documentation, in particular, you were asked to visit two pages:</p>
+				<ul>
+					<li><a href="http://www.wunderground.com/weather/api/d/docs?d=resources/code-samples" target="_blank" title="Opens in a new tab">Code Samples page</a> - example code for using varying technologies to get weather data</li>
+					<li><a href="http://www.wunderground.com/weather/api/d/docs?d=data/geolookup#feature__geolookup" target="_blank" title="Opens in a new tab">Geolookup page</a> - examples of requesting data in a variety of ways are shown at the bottom of the page.</li>
+				</ul>
+				<h2>Work with Someone</h2>
+				<p>As we have done before, you should complete this activity and the assessment with at least one other person and no more than 4 other people (5 maximum in a group). You will be required to report the name(s) of the person(s) you worked with.</p>
+				<h2>The Task</h2>
+				<p>In this activity you are going to use data from the weather.json file and the PHP code sample from the wunderground API to get the weather data for the respective city pages in the jsonweather folder, downloaded last week.</p>
+				<h2>Outcome</h2>
+				<p>The idea is to retrieve the same information for each of the city pages as you did in last week's assessment for the current location page: city and state names, current temperature, current condition and the other two required pieces of weather data that you chose to include (if you chose more than two, include all of the same ones that you did use last week).</p>
+				<h2>Setup and Test</h2>
+				<ol>
+					<li>Start with one of the weather pages (your choice).</li>
+					<li>Create a PHP code block on line 1 "&lt;?php &nbsp;?&gt;" of the file</li>
+					<li>Make sure the doctype declaration is on line 2.</li>
+					<li>Within the PHP code block, create some empty lines so you have room to work.</li>
+					<li>Go the <a href="http://www.wunderground.com/weather/api/d/docs?d=resources/code-samples&amp;MR=1" target="_blank" title="Opens in a new tab">wunderground code sample</a> page and copy the PHP sample.</li>
+					<li>Return to the city page you are working in and paste the example code.</li>
+					<li>Remove any extra opening (&lt;?php) or closing (?&gt;) PHP code block tags.</li>
+					<li>From the weather.json file select either the name and state, or longitude and latitude values or the zip code and use them in the URL string as needed to make a make a request to the wunderground API as seen in the <a href="http://www.wunderground.com/weather/api/d/docs?d=data/geolookup&amp;MR=1#city_within_the_usa" target="_blank" title="Opens in a new tab">geolookup examples</a>&nbsp;for whichever option you choose to use.</li>
+					<li>Remember to add your own API key to the URL string.</li>
+					<li>Add an "exit;" statement on the first empy line after the sample PHP code that you pasted into the weather page so that you can see the result of the PHP request for weather data.</li>
+					<li>Save the file.</li>
+					<li>Make sure your local server is running and click the "Live Preview" button in Brackets.</li>
+					<li>If everything is working, you should now see the line of data on your screen that says, "Current temperature in [city name] is: [temperature value] (with the real name and temperature instead of the text).</li>
+					<li>If things worked you are ready for the next step, if not do some troubleshooting until they do work.</li>
+					<li>Remove or comment out (use your <i><code>Command + /</code></i> for Mac or <i><code>Control + /</code></i> for Windows, or just type "<i><code>//</code></i>" to the far left of the line) the lines with echo <b><i>"Current temperature...."</i></b> and <b>exit; </b>so that they no longer work.</li>
+				</ol>
+				<h2>Data to the Page</h2>
+				<ol>
+					<li>Using the code in the PHP example taken from weather underground as an example, get the rest of the data that you used last week.</li>
+					<ol>
+						<li>You already have the city name ($location) and the current temperature ($temp_f).</li>
+						<li>You will need the state, current condition and the other items you used last week.</li>
+					</ol>
+					<li>Assign the values to <a href="http://www.w3schools.com/php/php_variables.asp" target="_blank" title="Opens in a new tab">PHP variables</a> ($variable_name), just as exemplified in the example PHP code.</li>
+					<li>Once the variables are created and have values assigned to them, you will put them into the page.</li>
+					<li>Each variable will have to be placed inside of a PHP code block with an echo and the variable followed by a semi-colon (e.g. <b>&lt;?php &nbsp;echo $temp_f; ?&gt;</b>).</li>
+					<li>The various variables will be placed in the following locations:</li>
+					<ul>
+						<li>The city and state variables (separated by a comma and space) will need to be the first items in the title element.</li>
+						<li>These same variable will need to be placed inside the h1 with the id of "cityDisplay".</li>
+						<li>The current temperature variable will go into the list item with the id of "currentTemp".</li>
+						<li>The current condition variable will go inside the list item with the id of "summary".</li>
+						<li>The other weather items that you used last week will go in the same location as you used last week (you will have to add the list items and id's (refer to the index.php page for id names if needed).</li>
+					</ul>
+					<li>When placed, run the page and make sure everything works, showing all of the weather data in the correct location.</li>
+					<li>Add an "id" attribute to the body element on the page that has a value of the city name (e.g. &lt;body id="franklin"&gt;).</li>
+					<li>In the user_styles.css file write a css rule that will not display the div with an id of "status" if it is on the page with an ancestor with an id equal to what you wrote in item 7 above.</li>
+				</ol>
+				<h2>An Example</h2>
+				<p>When you are done, you should see something that resembles the image below (your added data may be different than what is shown).</p>
+				<div></div>
+				<p><img src="../images/php_weather/php_sample.png" alt="Image of Weather App" title="Image of Weather App"></p>
+				<div></div>
+				<h2>Repeat</h2>
+				<p>With one city page done, repeat the same process with the other two city pages (NOT the index.php page).</p>
+				<p>When done, you should be able to click the various navigation links to move between the cities and see the weather data update to reflect that city's weather.</p>
+				<h2>List the Names</h2>
+				<p>When done and all of the city pages are working, add additional list items to the bottom of the "current_conditions" unordered list. Place your name in the first of the additional list items and the names of the others in additional list items. Add these to all of the city pages.</p>
+
+			</article>
+		</main>
+		<footer id="footer">
+			<a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="//i.creativecommons.org/l/by-sa/3.0/88x31.png" /></a> All materials (except as noted) are by <a href="https://blainerobertson.net">Blaine Robertson</a> and licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">Creative Commons Attribution-ShareAlike 3.0 License</a>.</footer>
+	</div>
+	<script src="../js/course.min.js"></script>
+</body>
+
+</html>

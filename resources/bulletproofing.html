@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>Bulletproof the Weather Site | Web Frontend Development</title>
+	<meta name="description" content="Bulletproof the weather site assessment for CIT 230">
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="../css/course.min.css">
+</head>
+
+<body>
+	<div id="main">
+		<header id="header">
+			<img src="../images/smallbanner.jpg" alt="CIT 230 Course Banner">
+		</header>
+		<main>
+			<article id="article">
+				<h1>Bulletproof the Weather Site</h1>
+				<hr>
+				<p>In this week's activities you have reviewed event handlers, JSON data and used PHP to get weather data for three city pages. Now, the assessment is to use event handlers to capture events from the links in the navigation menu, keep the default action from taking place, capturing data, feed that data to the API and show the resulting JSON data in the page. Whew, that is a lot of things.</p>
+				<h2>Bulletproofing?</h2>
+				<p>When you think of bulletproof you probably think of protective clothing that soldiers or police officers wear. While that is true, another definition is, "safe from failure; without errors or shortcomings and beyond criticism". (<a href="http://www.dictionary.com/browse/bulletproof" target="_blank" title="Opens in a new tab">Dictionary.com</a>)</p>
+				<p>That is what we are doing, making sure that if JavaScript is working (thus jQuery will work too) then the gathering of weather data will be done using jQuery. But, if JavaScript is not working (turned off), the gathering of data will continue to work (in this case for our city pages) using PHP in the city pages (completed in the PHP activity for this week).</p>
+				<h2>Work with Someone</h2>
+				<p>As we have done before, you should complete this assessment with at least one other person and no more than 4 other people (5 maximum in a group). You will be required to report the name(s) of the person(s) you worked with.</p>
+				<h2>Copy the remote_wu.js File</h2>
+				<ol>
+					<li>Make a copy of the remote_wu.js file and name the copy "remote_wu_bp.js".</li>
+					<li>Save the copy into the scripts folder.</li>
+					<li>In the index.php page change the script element to point to the newly minted "remote_wu_bp.js" file, instead of the original "remote_wu.js" file.</li>
+				</ol>
+				<h2>Write an Event Handler</h2>
+				<p>All further work for this assessment will be done in the "remote_wu_bp.js" file. No other pages or code will be changed except as noted in the "Collaboration" section below. Using the resources mentioned in this and last week's activities, or any other resource, do the following:</p>
+
+				<ol>
+					<li>Write an event handler to detect when a link in the navigation bar is clicked.</li>
+					<li>Prevent the default behavior of the link from occurring.</li>
+					<li>Capture the text value of the link that was clicked and store it in a javaScript variable.</li>
+					<li>Use console.log() frequently to see what is happening in the "developer console" of the browser.</li>
+					<li>Write a jQuery AJAX function to read the data from the local weather.json file for the city whose link was clicked.</li>
+					<li>Remember the dataType is "json"</li>
+					<li>Upon a successful read of the data from the weather.json file capture the latitude and longitude from the city's data object.</li>
+					<li>Call the getData function and pass in the longitude and latitude values.</li>
+					<li>When you believe you are done, test the functionality as outlined in the "Test" section below.</li>
+					<li>Continue working until the application behaves as explained in the "Test" section below.</li>
+				</ol>
+
+				<h2>Test</h2>
+				<ol>
+					<li>Save all your work and test in the local development environment.</li>
+					<li>When the index.php page is loaded the weather information for the current location should load.</li>
+					<li>When the navigation buttons are clicked the weather data for the remote location should load, but without leaving the index.php page (look at the address bar - cool, huh?!)</li>
+					<li>Using the Web Developer Toolbar, turn off JavaScript.</li>
+					<li>Reload the page. No current location weather data will load.</li>
+					<li>Click one of the City navigation items.</li>
+					<li>The new page should load <b>AND</b> the weather data for that location should load (look at the address bar).</li>
+					<li>Re-enable javaScript.</li>
+					<li>Reload and click the "Current" item in the nav bar. The current location weather should load. </li>
+				</ol>
+
+				<h2>Collaboration</h2>
+				<p>You were required to collaborate with at least one, and no more than four, other class member(s) during this assessment. When you are done, add a second comment to the index.php page, beneath last week's comment, indicating who you worked with for this assessment. For example:</p>
+
+				<code>&lt;/head&gt;<br>
+						&lt;!--*******************************************<br>
+						* Who did you collaborate with on this assessment?<br>
+						* 1. Your own name goes here<br>
+						* 2.<br>
+						* 3.<br>
+						* 4.<br>
+						* 5.<br>
+						****************************************** --&gt;<br>
+						&lt;!-- *****************************************<br>
+						* Bulletproofing Assessment Collaboration<br>
+						* 1. Your own name goes here<br>
+						* 2.<br>
+						* 3.<br>
+						* 4.<br>
+						* 5.<br>
+						* *************************************** --&gt;<br>
+						&lt;body&gt;<br>
+						</code>
+
+				<h2>Submit</h2>
+				<p>When you are confident that things are working as they should:</p>
+				<ol>
+					<li>Upload the index.php page</li>
+					<li>Upload the 3 city pages in the "views" folder.</li>
+					<li>Upload the remote_wu_bp.js file in the scripts folder.</li>
+					<li>Go to your temporary home page and click the link you made for last week's assessment, that points to the index.php page in the jsonweather folder.</li>
+					<li>Test everything again on the remote server just as you did in the "Test" section above to make sure it works the same on the remote server as it did in the local environment.</li>
+					<li>If things do not work, troubleshoot until they do.</li>
+					<li>You were asked to track your time to complete everything for this week. When thing work, post your total time spent this week to this week's collaboration board so you can receive credit for doing so, then you're done.</li>
+				</ol>
+
+				<h2>Grading Matrix</h2>
+				<h3>Objective 5 (45 points)</h3>
+				<ol>
+					<li>The index page loads the current weather conditions when javaScript is enabled. - 3 points</li>
+					<li>Navigation bar links to the Franklin, Greenville and Springfield pages load the respective weather data for all three cities into the index.php page and do not actually navigate away from the index page when javaScript is enabled. - 20 points</li>
+					<li>With JavaScript disabled, the index page does not load any weather data. - 2 points</li>
+					<li>With JavaScript disabled, navigation links navigate to the respective weather page and the weather data for that page is loaded. - 15 points (5 points per city page)</li>
+					<li>View the "remote_wu_bp.js" file to confirm the onclick event handler is present and appears viable. - 5 points</li>
+				</ol>
+				<h3>Objective 6 (15 points)</h3>
+				<ol>
+					<li>View the source code for the index.php page, the names of collaborators is shown for the assessment. - 5 points</li>
+					<li>With JavaScript disabled, navigate to any of the city pages. The names of collaborators for the PHP Weather data activity are listed. - 5 points</li>
+					<li>The time needed to complete all work was reported to this week's collaboration board. - 5 points</li>
+				</ol>
+			</article>
+		</main>
+		<footer id="footer">
+			<a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="//i.creativecommons.org/l/by-sa/3.0/88x31.png" /></a> All materials (except as noted) are by <a href="https://blainerobertson.net">Blaine Robertson</a> and licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">Creative Commons Attribution-ShareAlike 3.0 License</a>.</footer>
+	</div>
+	<script src="../js/course.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>HTML5 Video | Web Frontend Development</title>
+	<meta name="description" content="HTML5 Video activity for CIT 230">
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="../css/course.min.css">
+</head>
+
+<body>
+	<div id="main">
+		<header id="header">
+			<img src="../images/smallbanner.jpg" alt="CIT 230 Course Banner">
+		</header>
+		<main>
+			<article id="article">
+				<h1>HTML5 Video</h1>
+				<hr>
+				<h2>HTML5 Video Element</h2>
+				<p>In the past, HTML relied on third-party tools such as Flash to place and run video inside of a web page. Fortunately, HTML5 and the modern browsers that support it make that a thing of the past. Now, browsers can support video natively, which makes things far more convenient for developers and site visitors. You can learn much more of the official information about HTML5 video at the W3C wiki reference at <a href="https://www.w3.org/wiki/HTML/Elements/video" title="Read more about the html5 video element on the W3C wiki">http://www.w3.org/wiki/HTML/Elements/video</a>)!</p>
+				<p>In its simplest form the element looks like this:</p>
+				<p><code>&lt;video src="path/filename"&gt;&lt;/video&gt;</code></p>
+				<p>However, this wouldn't get us very far. So we add attributes to enhance functionality.</p>
+				<h2>Attributes</h2>
+				<table>
+					<tbody>
+						<tr>
+							<th>Attribute</th>
+							<th>Value(s)</th>
+							<th>Description</th>
+						</tr>
+						<tr>
+							<td><code>src</code></td>
+							<td>path and/or file name</td>
+							<td>Indicate the location of the video file in the site structure.</td>
+						</tr>
+						<tr>
+							<td><code>controls</code></td>
+							<td>None</td>
+							<td><strong>Boolean</strong> - Enables the default controls to play, pause, forward, reverse the playback as well as adjust volume</td>
+						</tr>
+						<tr>
+							<td><code>autoplay</code></td>
+							<td>None</td>
+							<td><strong>Boolean</strong> - Enables the video to play automatically (don't do this!)</td>
+						</tr>
+						<tr>
+							<td><code>preload</code></td>
+							<td>None, Auto, Metadata</td>
+							<td>
+								<ul>
+									<li><strong>None</strong> - do not load the file until play is activated.</li>
+									<li><strong>Auto</strong> - download the file for playback as soon as the page loads. Including the preload attribute without a value is the same as preload="auto".</li>
+									<li><strong>Metadata</strong> - download information about the file, but not the file itself.</li>
+								</ul>
+							</td>
+						</tr>
+						<tr>
+							<td><code>loop</code></td>
+							<td>None</td>
+							<td><strong>Boolean</strong> - does what it sounds like (don't do this).</td>
+						</tr>
+						<tr>
+							<td><code>poster</code></td>
+							<td>path and/or file name</td>
+							<td>Display an image representative of the video prior to the video being played.</td>
+						</tr>
+						<tr>
+							<td><code>height</code></td>
+							<td>pixel value</td>
+							<td>Sets the height of the video in the web page. Use CSS instead.</td>
+						</tr>
+						<tr>
+							<td><code>width</code></td>
+							<td>pixel value</td>
+							<td>Sets the width of the video in the web page. Use CSS instead.</td>
+						</tr>
+						<tr>
+							<td><code>muted</code></td>
+							<td>None</td>
+							<td><strong>Boolean</strong> - Sets the audio of the video file, can override the user's preference.</td>
+						</tr>
+						<tr>
+							<td><code>type</code></td>
+							<td>Mime type</td>
+							<td>This provides the browser with additional information that it may need to be able to playback the file.</td>
+						</tr>
+					</tbody>
+				</table>
+				<p>Including some common attributes, the audio element would more likely look like this:</p>
+				<p><code>&lt;video controls preload="none" poster="path/filename" src="path/filename"&gt;&lt;/video&gt;</code></p>
+				<h2>Varied Format Support</h2>
+				<p>In the past, different browsers supported different video formats, making it cumbersome for developers because instead of creating a single video, you would have to create three versions of the video file using different formats: MP4, OGV and WebM. Each type would have to be embedded in the video element using the &lt;source&gt; child element. See the example shown below:</p>
+				<pre class="callout"><code>
+&lt;video controls preload="metadata" poster="/path/filename.png"&gt;
+	&lt;source src="/path/filename.mp4" type="video/mp4"&gt;
+	&lt;source src="/path/webm" type="video/webm"&gt;
+	&lt;source src="path/filename.ogv" type="video/ogg'&gt;
+	&lt;p&gt;Your browser does not support HTML5 video.
+	You can &lt;a href="/path/filename.zip"
+	title="download a zipped version of the file"&gt;
+	download a zipped version&lt;/a&gt; (3 MB) of the
+	file in MP4 format to your computer.&lt;/p&gt;
+&lt;/video&gt;
+</code></pre>
+				<h2>Uniform Support</h2>
+				<p>Thankfully, those days are now past. If you refer to the <a href="http://caniuse.com/#search=mp4" target="_blank" title="Opens in a new tab">caniuse.com website</a> you will see that virtually all modern browsers now support the MP4 format.</p>
+				<p><strong>Converting Other Formats to MP4</strong></p>
+				<p>Unfortunately, many programs and devices do not produce their video in the mp4 format. Instead they create video in ".mov" or ".wmv" formats. Converting either of these to MP4, is not hard, but necessary. Miro Video Converter is a free video conversion tool that is available for Windows and Mac - an important note, Miro VideoConverter is a conversion tool only, it is NOT a video editor, those tools are complex and are outside of the scope of this tutorial. Unfortunately, the tool is old, but still works and is simple to use. The tool can be downloaded from the Open Source Lab (sponsored by Oregon State University) or from my GitHub Repository using these links: <a href="../downloads/miro_converter_3_mac.tar.bz2" title="Download the Mac file" target="_blank">Miro for Mac</a>, <a href="../downloads/miro_converter_3_windows.zip" title="Download the Windows file" target="_blank">Miro for Windows</a>. In either case, version 3 of the tool is the most recent.</p>
+				<h2>Create a Video File</h2>
+				<p><strong>You should work together with members of your learning group</strong> for the rest of this tutorial to help and support one another. When you are done converting your video file you will write the code to use it in the index.html page, along with the code for responsive images from the other activities within this responsive media lesson, then upload and test everything to make sure your media works in different browsers and on a variety of devices as well.</p>
+				<p>Prior to beginning you will need a video file, use this <a href="../downloads/sandiego.mov.zip" title="Download the sample file" target="_blank">sample file</a> (in zip format). Once downloaded, unzip the file and transfer the video to your responsive_media folder.</p>
+				<ol>
+					<li>Visit the Miro site or use one of the provided links above to download Miro Video converter. Once downloaded install MiroVideoConverter on your machine .</li>
+					<li>Launch MiroVideoConverter and drag your video file to the drag and drop box in Miro as directed.</li>
+					<li>From the drop down "Format" menu, choose "Video" and then "MP4".</li>
+				</ol>
+				<ol>
+					<li value="5">Click the "Convert to MP4" button and let the conversion complete.</li>
+					<li>When done, click the "Show File" link, next to the video file image.</li>
+					<li>Move the converted MP4 file from the current location to the location in your responsive_media folder where you want it stored.</li>
+					<li>Check the file name. If more than one extension (such as two .mp4's at the end) exists, delete one of them leaving only a single .mp4 after the file name.</li>
+				</ol>
+				<h3>Test the Sample Video</h3>
+				<p>To test the video simply drop it onto any browser icon in your computer or open a browser window and drag the video to the window. If the video begins playing you know that it is good to go. Easy, isn't it?!</p>
+				<h2>Lighter Weight</h2>
+				<p>By editing and converting the original file, not only is it ready to distribution to a web site, but it is also lighter weight than it would otherwise be, see the chart below:</p>
+				<table>
+					<tbody>
+						<tr>
+							<th>Version</th>
+							<th>Length</th>
+							<th>Weight</th>
+						</tr>
+						<tr>
+							<td>MOV (original)</td>
+							<td>49 seconds</td>
+							<td>5.4 MB</td>
+						</tr>
+						<tr>
+							<td>MP4</td>
+							<td>49 seconds</td>
+							<td>3 MB</td>
+						</tr>
+					</tbody>
+				</table>
+				<h3>Do It Again</h3>
+				<p>Now that you have gone through the process with a sample video, let's do it again with a real video for the Grand Canyon page (index.html in the responsive_media folder).</p>
+				<p>In the raw-images folder you will find a video of mule pack trains used in the Grand Canyon, pack_mules.mov. This video is from the National Park Service and is in the public domain.</p>
+
+				<p>Convert it to mp4 format and save it to the images folder or if you want, create a "videos" folder and save it there. Then do the steps listed below.</p>
+				<h2>Insert and Test the Video</h2>
+				<ol>
+					<li>With the video file converted you are ready to implement and test.</li>
+					<li>Use the index.html page in the responsive_media folder.</li>
+					<li>In the web page, within the &lt;main&gt; element, find the &lt;video&gt; element already provided.</li>
+					<li>Enter the "src" attribute and the correct path within the src attribute to point to the video file. <strong><em>Refer to the sample code provided in the Attributes section of this activity if needed.</em></strong></li>
+					<li>Test the web page and the video file in Live Preview and using different browsers and in different screen sizes.</li>
+					<li>If things do not work as expected, troubleshoot to find and fix the error. Get help if necessary.</li>
+					<li><strong>Notice</strong>: When you are ready to upload the responsive_media folder to your remote hosting site be aware that video files can be very large! If the file weight is more that 1MB I recommend uploading the video files using a tool like FileZilla. It can handle the large file sizes, whereas programs like eqFTP for Brackets may fail in the uploading of very large files.</li>
+					<li>Once uploaded to your remote hosting site, test the index.html file in the responsive_media folder with multiple browsers and on differing operating systems using multiple devices to make sure things work as planned.</li>
+				</ol>
+
+			</article>
+		</main>
+		<footer id="footer">
+			<a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="//i.creativecommons.org/l/by-sa/3.0/88x31.png" /></a> All materials (except as noted) are by <a href="https://blainerobertson.net">Blaine Robertson</a> and licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">Creative Commons Attribution-ShareAlike 3.0 License</a>.</footer>
+	</div>
+	<script src="../js/course.min.js"></script>
+</body>
+
+</html>

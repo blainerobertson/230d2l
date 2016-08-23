@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>Implement Responsive Images | Web Frontend Development</title>
+	<meta name="description" content="Implementing Responsive Images into a web site for CIT 230">
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="../css/course.min.css">
+</head>
+
+<body>
+	<div id="main">
+		<header id="header">
+			<img src="../images/smallbanner.jpg" alt="CIT 230 Course Banner">
+		</header>
+		<main>
+			<article id="article">
+				<h1>Implement Responsive Images</h1>
+				<hr>
+				<h2>Assumptions</h2>
+				<p>Prior to doing this activity it is assumed that you have:</p>
+				<ol>
+					<li>Read the assigned readings for this week listed in the overview page:</li>
+					<ul>
+						<li>Web Image Types</li>
+						<li>Multiple Background Images</li>
+						<li>Using srcset and sizes</li>
+						<li>Using srcset</li>
+					</ul>
+					<li><a href="https://www.sitepoint.com/premium/screencasts/responsive-images-with-the-picture-tag-and-picturefill-js?action=redirect_to_screencast" title="Open in a new tab" target="_blank">Watched the Responsive Images video</a> (SitePoint Premium)</li>
+					<li><a href="../downloads/responsive_media.zip" title="Download the file" target="_blank"> Downloaded the responsive images zip file</a></li>
+					<li><a href="create_responsive_images.html" title="Open in a new tab" target="_blank">Completed the Create Responsive Images</a> activity</li>
+					<li><a href="optimize_images.html" title="Open in a new tab" target="_blank">Completed the Optimize Images</a> activity</li>
+				</ol>
+				<p>If you have not done these items, as listed, please do so before proceeding with this activity.</p>
+				<h2>Work Together</h2>
+				<p>All through this course you have been encouraged and sometimes required to work with others. You are strongly encouraged to work with at least one other member of the class on this activity!</p>
+				<h2>The Activity</h2>
+				<p>This is an application activity, which is to find out if you can apply what you understand from the preparatory readings and video. Begin by reviewing the index.html file found in the downloaded zip file. The markup for the page is complete and should not be changed except to add the code needed for the responsive content image as directed below.</p>
+				<h2>The Page Header</h2>
+				<p>The index page has a page header, specified using the markup "&lt;header class="page-header"&gt;". You will find a corresponding class in the style.css file in the css folder. There you will find three selectors already written and waiting for you - one for small screens on line 52, one for medium screens on line 173 and one for large screens on line 218.</p>
+				<p>You are to write css code to enable multiple background images into the header. The banner image you created and optimized should be used as well as the nps-logo that you created and optimized. The smallest versions of these files should be used for small screens, the medium versions for medium screens and the large versions for the large screens. Each of these respective usages will occur in the rule for that size of a screen.</p>
+				<p>To implement these multiple backgrounds, the html should not be changed at all. All implementation will take place in the style.css file. When done, your page header should look similar to the image below:</p>
+				<figure><img src="../images/resp_images/resp_banner.jpg" alt="Responsive banner" title="Responsive banner"></figure>
+				<h2>The Content Image</h2>
+				<p>The index.html file has a content image placeholder. The placeholder is "&lt;figure class="featured-image"&gt;" and within it is an &lt;img&gt; element. All markup for this activity will occur in or around the &lt;img&gt; element in the index.html page. There should be no changes made to the css styles for either of these elements.</p>
+				<p>You are to use the "srcset" alone, or the "srcset" and "sizes" attributes in combination within the &lt;img&gt; element, or replace the &lt;img&gt; element and replace it with a &lt;picture&gt; element in order to implement the responsive images.</p>
+				<p>The outcome is to deliver the smallest version of your optimized images (from the Creating Images and Optimizing Images) to the screen depending on screen size, viewport width or pixel density of the screen. Based on your readings and video demonstrations there are multiple possible solutions.</p>
+				<p>If your images used "art direction" to crop in and focus on a particular aspect of an image as the image became smaller (which you should have done), then it should be easy to see that the images are changing based on either screen size, viewport width or device pixel density.</p>
+				<p>Two example images, the one on top is for small screens while the one below is for medium and large screens (different # of pixels based on size or pixel density).</p>
+				<figure><img src="../images/resp_images/resp_small.jpg" alt="Responsive Small Image" title="Responsive Small Image">
+					<figcaption>Small Screen &amp; viewport width</figcaption>
+				</figure>
+				<figure><img src="../images/resp_images/resp_large.jpg" alt="Responsive Image Large" title="Responsive Image Large">
+					<figcaption>Medium or Large Screen, wide viewport, high density</figcaption>
+				</figure>
+				<p>Done? Wonderful! Next, move on to the <a href="html5_video.html" title="Open in a new tab" target="_blank">HTML5 video activity</a>. You may also want to take a look at the <a href="resp_media_assess.html" title="Open in a new tab" target="_blank">Responsive Media Assessment</a> to see what is expected when all of the activities for this week are done.</p>
+
+			</article>
+		</main>
+		<footer id="footer">
+			<a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="//i.creativecommons.org/l/by-sa/3.0/88x31.png" /></a> All materials (except as noted) are by <a href="https://blainerobertson.net">Blaine Robertson</a> and licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">Creative Commons Attribution-ShareAlike 3.0 License</a>.</footer>
+	</div>
+	<script src="../js/course.min.js"></script>
+</body>
+
+</html>

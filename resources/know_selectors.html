@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>Know Your CSS Selectors | Web Frontend Development</title>
+	<meta name="description" content="Know Your CSS Selectors to use jQuery for CIT 230">
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="../css/course.min.css">
+</head>
+
+<body>
+	<div id="main">
+		<header id="header">
+			<img src="../images/smallbanner.jpg" alt="CIT 230 Course Banner">
+		</header>
+		<main>
+			<article id="article">
+				<h1>Know Your CSS Selectors</h1>
+				<hr>
+				<p>As you watch the Introduction to jQuery video course and review the jQuery documentation, you are going to see "selectors" at work. A selector, as we have learned in CSS, is the means the browser uses to know what is being "selected" for styling or some other operation.</p>
+				<h2>HTML</h2>
+				<p>In HTML we have a variety of ways of marking up code:</p>
+				<ol>
+					<li>Using the element. All of the examples are simple opening tags of the element.
+						<br>For example, &lt;p&gt;, &lt;nav&gt;, &lt;div&gt;, &lt;li&gt;, &lt;a&gt;</li>
+					<li>Adding a class to an element. <i><b>Classes can be repeated on a web page!</b></i>
+						<br>For example, &lt;h1 class="page-title-heading"&gt;, &lt;li class="box"&gt;, &lt;li class="box"&gt; (remember, they can be repeated)</li>
+					<li>Adding an id to an element. <i><b>There should only be ONE id with the same value per page.</b></i>
+						<br>For example, &lt;div id="wrapper"&gt;, &lt;nav id="page-nav"&gt;, &lt;footer id="page-footer"&gt;</li>
+				</ol>
+				<h2>CSS</h2>
+				<p>In CSS, we use symbols to indicate if the CSS selector belongs to an element, class or id.</p>
+				<p>#page-nav - the <i><b># symbol indicates this is an "id"</b></i> selector.</p>
+				<p>.page-title-heading - <i><b>the period (.) indicates this is a "class"</b></i> selector.</p>
+				<p>p - <i><b>the element name</b></i>, without the greater or less than symbols <i><b>indicates an element selector</b></i>.</p>
+				<p>In addition, remember that CSS can select <i><b>based on the attribute</b></i> of an html element:</p>
+				<p>a[href], img[src], li[class] - These are example of any element with the attribute in the brackets. There are also <a href="http://www.w3schools.com/css/css_attribute_selectors.asp" target="_blank" title="Opens in a new tab">many ways to determine if the attribute possesses a value</a>.</p>
+				<p>There are also <i><b>children selectors</b></i> (e.g. ul &gt; li, header &gt; nav). The element listed first is the parent, the "&gt;" sign indicates that the element on the right must be a child.</p>
+				<p>The selectors listed are common, but there are many others. Refer to the <a href="http://www.w3schools.com/cssref/css_selectors.asp" target="_blank" title="Opens in a new tab">list of CSS selectors</a> found on W3Schools.com.</p>
+				<h2>Why is this important?</h2>
+				<p>jQuery uses the CSS selector syntax to identify the html that it too will interact with. You must remember this!</p>
+			</article>
+		</main>
+		<footer id="footer">
+			<a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="//i.creativecommons.org/l/by-sa/3.0/88x31.png" /></a> All materials (except as noted) are by <a href="https://blainerobertson.net">Blaine Robertson</a> and licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">Creative Commons Attribution-ShareAlike 3.0 License</a>.</footer>
+	</div>
+	<script src="../js/course.min.js"></script>
+</body>
+
+</html>
