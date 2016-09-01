@@ -7,3 +7,5 @@ base/template.html
 2.0Raw/*
 2.0Raw/week11/overview.html
 archived/*
+.DS_Store
+*/.DS_Store
