@@ -16,22 +16,23 @@
       <article id="article">
         <h1>Search Tool Assessment</h1>
         <h2>Overview</h2>
-        <p>Last week you built a static link that allowed you to request a JSON object from the wunderground web site for each of the cities we have worked with during the semester. Then, you were to break apart the JSON object and display the data into a web page.</p>
+        <p>Last week you built a link that was used to request a JSON object from the wunderground web site for the current location. Then, you broke apart the JSON object and displayed the data into a web page.</p>
         <p>This week, you have built a search tool to dynamically create a list of locations that match the term being typed into a search bar and created a link for each of those terms that, when clicked, would display the weather information for the location on the Weather Underground web site. However, by leaving your site your site visitors lose interest in what you have to offer.</p>
         <p>This assessment will have you put the skills and concepts from both week's to work.</p>
         <h2>The Assessment</h2>
         <ol>
-          <li>You will return to your weather pages (which you began working with back in week 5) and add a "home" page.</li>
-          <li>"Home" will also need to be added as a working link to the navigation bar.</li>
-          <li>The home page will contain a search bar and, just like this week's activity, dynamically generate a list of locations based on the search term being typed.
+          <li>You will return to your weather pages (which you began working with back in week 5) and create a "search" page.</li>
+          <li>"Search" will also need to be added as a working link to the navigation bar or to a tool bar in the page header.</li>
+          <li>The search page will contain a search bar and, just like this week's activity, dynamically generate a list of locations based on the search term being typed.
           <ul>
             <li>Do NOT use the same search.js file as for the activity, make a new one and use it.</li>
             <li>You may want to use CSS or JavaScript to show the search results until a link within it is clicked, then hide it.</li>
             </ul>
           </li>
-          <li>Replace the link built in the activity with one that will request a JSON object of weather data for the listed location (just like you did last week).</li>
-          <li>When returned, the JSON object will be used to display the current weather data for the location in the "home" page.</li>
-          <li>Thoroughly test your work to ensure it works prior to the submission deadline.</li>
+          <li>Replace the link built in this week's activity with one that will request a JSON object of weather data for the listed location (similar to the current location link you did last week).</li>
+          <li>When returned, the JSON object will be used to display the current weather data for the location in the "search" page.</li>
+          <li>The title and content headings must also update to reflect the location for which the weather data is being displayed (just like last week).</li>
+          <li>Thoroughly test your work to ensure it works both locally and on the GitHub server prior to the submission deadline.</li>
         </ol>
         <h2>Collaboration</h2>
         <ul>
@@ -41,21 +42,35 @@
           <li>Remember the list is in the code as a comment and should not be visible in the browser.</li>
         </ul>
         <h2>Submit Your Work</h2>
-        <p><strong>Post the new home page to your site, along with any other updated files in the weather site and create a link to the home page on your temporary home page with the link text of "Weather Home".</strong></p>
+        <p><strong>Post the new search page to your site, along with any other updated files in the weather site to your GitHub server.</strong></p>
         <p>Go to this week's collaboration board and post the total amount of time needed to complete all work (readings, activity and assessment) for the week.</p>
         
         <h2>Grading Matrix</h2>
-				<h3>Objective 5 (45 points)</h3>
+				<h3>Objective 5 (30 points)</h3>
 				<ol>
-					<li>The search bar on the home page dynamically generates a list of locations that match the search term when javaScript is enabled. - 3 points</li>
+					<li>A search link exists in the weather site and is accessible from any page in the site which leads to the search page. - 2 points.</li>
+          <li>The search page contains a search bar which dynamically generates a list of locations that match the search term. - 3 points</li>
+          <li>Each item in the dynamic list is a working link. - 5 points</li>
+          <li>When clicked, the link requests and receives back a JSON object of weather data for that location (visible in the console tab of the developer tools). - 5 points</li>
+          <li>The weather data for the clicked location is displayed in the search page:
+          <ul>
+            <li>The title shows the name of the location. - 2 points</li>
+            <li>The content heading shows the name of the location. - 2 points</li>
+            <li>The current temp is displyed along with the degree symbol. - 4 points</li>
+            <li>The current date high and low temps are displayed with degree symbols. - 4 points</li>
+            <li>A summary of the current date's weather is displayed. - 3 points</li>
+            </ul>
+          </li>
+<!--
 					<li>Navigation bar links to the Franklin, Greenville and Springfield pages load the respective weather data for all three cities into the home page and do not actually navigate away from it when javaScript is enabled. - 20 points</li>
 					<li>With JavaScript disabled, the index page does not load any weather data. - 2 points</li>
 					<li>With JavaScript disabled, navigation links navigate to the respective weather page and the weather data for that page is loaded. - 15 points (5 points per city page)</li>
 					<li>View the "remote_wu_bp.js" file to confirm the onclick event handler is present and appears viable. - 5 points</li>
+-->
 				</ol>
 				<h3>Objective 6 (15 points)</h3>
 				<ol>
-					<li>View the source code for the home page, the names of collaborators is shown for the assessment. - 5 points</li>
+					<li>View the source code for the search page, the names of collaborators is shown for the assessment. - 5 points</li>
 					<li>View the source code for the activity page (a separate link on the temporary home page), the names of collaborators is shown for the activity. - 5 points</li>
 					<li>The time needed to complete all work was reported to this week's collaboration board. - 5 points</li>
 				</ol>
