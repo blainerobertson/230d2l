@@ -24,20 +24,20 @@
         <p>Unlike previous assessments, this one will require it to be done twice. Once using the seed code files provided below and again in the weather pages you began working with back in week 5.</p>
         <h2>Get the Seed Code</h2>
         <p>Below is a link for you to download seed code to use for this assessment.</p>
-        <p class="callout"><a href="../downloads/jsonweather.zip" target="_blank" title="opens in a new tab">jsonweather.zip</a></p>
+        <p class="callout"><a href="../downloads/jsonweather-html.zip" target="_blank" title="opens in a new tab">jsonweather-html.zip</a></p>
         <ol>
-          <li>Once downloaded, unzip the file and move the "jsonweather" folder to the root (typically htdocs) of your local web site.</li>
+          <li>Once downloaded, unzip the file and move the "jsonweather-html" folder to the root of your local web site.</li>
           <li>Open the folder and become familiar with the files that are included.</li>
         </ol>
         <h2>Get The Data</h2>
         <p>All code for this assessment will be written only in the remote_wu.js file, no other code will be allowed with the exception of custom CSS as explained in step 8.3 below!</p>
         <ol>
           <li>You will probably want to review the Weather Underground links provided in the <a href="wu_api.html" target="_blank" title="Open the weather underground API activity page">Weather Underground API activity</a> as they indicate <b>How</b> to request data and the <b>Type</b> of data that you will need.</li>
-          <li>Use the jQuery $.ajax method which begins on line 24 and currently ends on line 34.</li>
+          <li>Use the jQuery $.ajax method which begins on line 25 and currently ends on line 35.</li>
           <li>Write all code within this method, add new lines within the method as need.</li>
           <li>Send the URL to the weather underground API requesting both the geolocation and conditions objects. Use the method that allows you to send in the latitude and longitude for the current location. Don't forget to include your API key as required in the URL.
             <ol>
-              <li>The latitude (lat) and longitude (long) were gotten for you on lines 9 and 10.</li>
+              <li>The latitude (lat) and longitude (long) were gotten for you on lines 10 and 11.</li>
             </ol>
           </li>
           <li>The dataType needed will be "jsonp".</li>
@@ -66,19 +66,19 @@
         <p>Make sure you thoroughly test the page on your local system to insure that all data works and is clearly visible as you intend it to be on all screen sizes. Test using the Chrome developer tools and device emulators.</p>
         <h2>Change the jQuery library</h2>
         <p>As with last week's work, the index page uses a local version of the jQuery library.</p>
-        <p>Prior to uploading this to your GitHub server, switch the local version to a CDN distributed version of jQuery 3.x.</p>
+        <p>Prior to uploading this to your GitHub server, switch the local version to a CDN distributed current version of jQuery 3.x.</p>
         <h2>Add the Collaboration List</h2>
         <p>Add the names of the people that you collaborated with to the comment in the index page (between the head and body elements prior to uploading.</p>
         <h2>Create a Link</h2>
-        <p>On your temporary home page, create a link to the seed code index page within the jsonweather folder.</p>
-        <p>Upload the altered temporary home page and the entire jsonweather folder.</p>
+        <p>On your temporary home page, create a link to the seed code index page within the jsonweather-html folder.</p>
+        <p>Upload the altered temporary home page and the entire jsonweather-html folder.</p>
         <h2>Remote Testing</h2>
         <p>Thoroughly test the links and operation of your code on the production server.</p>
         <p><strong>Note:</strong> As of version 50, the <a href="https://developers.google.com/web/updates/2016/04/geolocation-on-secure-contexts-only?hl=en" title="Click to read more about Google's decision" target="_blank">Chrome browser does not support the geoLocation javascript function</a> unless the domain is a secured domain using the https protocol! Most shared hosting sites do not use https. The easiest solution is to test your page using a different browser (FireFox or Safari) instead of using Chrome.</p>
         <p>However, our GitHub repositories do use the https protocol so we should not have a problem.</p>
         <h2>Do It Again!</h2>
         <ol>
-          <li>Return to the weather pages that you built beginning in week 5 and create an index.html page for the weather site (<b>DO NOT REPLACE YOUR SITE HOME PAGE</b>).</li>
+          <li>Return to the weather pages that you built beginning in week 5 and create an index.html page for the weather site (<b>DO NOT REPLACE YOUR OWN SITE HOME PAGE</b>).</li>
           <li>Make this index page act as a "current location page" just as you did with the seed code page.</li>
           <li>Link and/or modify jQuery, JavaScript and CSS files to the index page to allow it to function as needed.</li>
           <li>Copy the collaboration list comment from the seed code index page to the weather site index page, in the same location between the head and body sections of the file.</li>
@@ -106,7 +106,7 @@
       </article>
     </main>
     <footer id="footer">
-      <a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="//i.creativecommons.org/l/by-sa/3.0/88x31.png" /></a> All materials (except as noted) are by <a href="http://blainerobertson.net">Blaine Robertson</a> and licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">Creative Commons Attribution-ShareAlike 3.0 License</a>.</footer>
+      <a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/deed.en_US" target="_blank"><img alt="Creative Commons License" style="border-width:0" src="//i.creativecommons.org/l/by-sa/3.0/88x31.png" /></a> All materials (except as noted) are by <a href="http://blainerobertson.net" target="_blank">Blaine Robertson</a> and licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US" target="_blank">Creative Commons Attribution-ShareAlike 3.0 License</a>.</footer>
   </div>
   <script src="../js/course.min.js"></script>
 </body>
