@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Menu Activity | Web Frontend Development</title>
+  <meta name="description" content="Building jQuery based menu to use JSON content for CIT 230">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="../css/course.min.css">
+</head>
+
+<body>
+  <div id="main">
+    <header id="header">
+      <img src="../images/smallbanner.jpg" alt="CIT 230 Course Banner">
+    </header>
+    <main>
+      <article id="article">
+        <h1>Menu Activity</h1>
+        <h2>Introduction</h2>
+        <p>By now you know that JSON files are a means of moving data from one location to another. You also know that each piece of data has a “key” that can be used to identify it. Last week you used the weather underground API to get a JSON file of data for the current location and then read the data from the file and inject it into a web page. This activity will do something similar, but will actually read data from a local JSON file in order to request data from a remote API and then inject the returned data into a web page.</p>
+
+        <h2>Get the Seed Code</h2>
+        <p>Download the seed code using the link below.</p>
+        <p class="callout"><a href="../downloads/menu-activity.zip" title="Download the menu activity seed code" target="_blank">Download the menu activity code</a></p>
+        <ol>
+          <li>Unzip the file and place the menu-activity folder at the root of your local web site.</li>
+          <li>Carefully review the included files. All code for this activity will be done in the menu.js file.</li>
+        </ol>
+
+        <h2>Two Functions</h2>
+        <p>In this activity we will write two functions. The first will actually request the JSON data from the wunderground API and then inject it into the web page. The second function will watch for a mouse click on one of the cities in the navigation bar and when detected, will stop the link from working and use the text from the link to get a single piece of data from the local weather.json file. That single piece of data will then be sent to the first function in order to get the current data from the wunderground API.</p>
+
+        <h3>The getData() Function</h3>
+        <p><strong>You will need your wunderground API key (obtained last week) for this function. Be sure to locate it before starting.</strong></p>
+
+        <p>Open the menu.js file and write the following into the file:</p>
+        <pre class="callout"><code>
+// Get weather data from wunderground.com
+function getData(input) {
+  // Get the data from the wunderground API
+  $.ajax({
+    url: "http://api.wunderground.com/api/YOUR_KEY_HERE/geolookup/conditions/q/"
+    + input + ".json"
+    , dataType: "jsonp"
+    , success: function (data) {
+      console.log(data);
+      var location = data.location.city + ', ' + data.location.state;
+      var temp_f = data.current_observation.temp_f;
+      console.log('Location is: ' + location);
+      console.log('Temp is: ' + temp_f);
+      $("#cityDisplay").text(location);
+      $("title").html(location + " | Weather Center");
+      $("#currentTemp").html(Math.round(temp_f) + '&deg;');
+      $("#summary").text(toTitleCase(data.current_observation.icon));
+      $("#cover").fadeOut(250);
+    }
+  });
+}</code></pre>
+
+        <h3>An Explanation</h3>
+        <ol>
+          <li>The function is named getData and expects one parameter (piece of information) to be given to it in order for it to operate.</li>
+          <li>The function uses a jQuery ajax function to get the data.</li>
+          <li>The first item in the ajax function is the URL of where the data is being requested. <strong>VERY IMPORTANT:</strong> Replace the text “YOUR_KEY_HERE” with your API key!</li>
+          <li>The next line tells the ajax function that you expect data of type JSONP (this is a security requirement).</li>
+          <li>The next line creates a callback function when the ajax is successful.</li>
+          <li>The first thing within the callback is write the data object to the console so we can see what was returned.</li>
+          <li>The next two lines create JavaScript variables and store values into them from the returned data.</li>
+          <li>The next two lines write these variables and some regular text to the console so we can make sure things are working.</li>
+          <li>The next four lines inject data into specific containers within the web page.</li>
+          <li>The last line causes the “cover” container to fadeout of sight in the browser.</li>
+        </ol>
+
+        <p>Be sure to study each line, comparing it with the HTML markup found in the index.html file to see that you know where things will be built. Keep in mind, it won’t work until the second function is in place.</p>
+
+        <h3>An "on" Function</h3>
+        <p>This is a “listener” function that waits for a navigation link to be clicked. When that happens it stops the click and proceeds to get data for that city.</p>
+
+        <p>Create a few empty lines below the first getData() function. Then write the code shown below:</p>
+
+<pre class="callout"><code>
+// Intercept the menu link clicks
+$("#page-nav").on("click", "a", function (evt) {
+  evt.preventDefault();
+  // With the text value get the needed value from the weather.json file
+  var jsonCity = $(this).text(); // Franklin, etc...
+  console.log(jsonCity);
+  $.ajax({
+    url: "/menu-activity/scripts/weather.json"
+    , dataType: "json"
+    , success: function (data) {
+      console.log(data);
+      console.log(data[jsonCity]);
+      var zip = data[jsonCity].zip;
+      console.log(zip);
+      getData(zip);
+    }
+  });
+});
+</code></pre>
+
+        <h3>An Explanation</h3>
+        <ol>
+          <li>Line 1 begins by watching the #page-nav container for any “click” event that happens on an “a” (anchor) element. When that happens it creates a success function and sends the event into the function to be used.</li>
+          <li>The next line directs JavaScript to stop the event (the click) from happening (we won’t leave the current page).</li>
+          <li>The next line is a comment to help us know what is happening.</li>
+          <li>Line 4 creates a variable and gets the text value from the link that was clicked.</li>
+          <li>Line 5 writes the value to the console so we can see what was captured.</li>
+          <li>Line 6 uses an jQuery ajax function (just as in the first function) to get data from another source.</li>
+          <li>Line 7 provides the path to where the data is stored, in this case our local weather.json file.</li>
+          <li>Line 8 tells the ajax function that we expect plain “json” data (because we are getting local data the security requirement of using JSONP is not necessary).</li>
+          <li>Line 9 creates a success function and will store the returned json into a variable named “data”.</li>
+          <li>Line 10 writes the data object to the console so we can see it.</li>
+          <li>Line 11 writes the data for the city from within the data object (notice the array-like format) to the console so we can be sure it matches the city that was clicked in the navigation bar.</li>
+          <li>Line 12 creates a zip code variable and gets the zip code for the city that was clicked.</li>
+          <li>Line 13 writes the zip code to the console so we can check that it worked.</li>
+          <li>Line 14 sends the zip code variable to the getData() function as its input.</li>
+        </ol>
+
+        <h2>Check Your Code</h2>
+        <p>Be sure to double check what you wrote against the code shown in this activity. Watch for spelling errors, omitted characters and the like. The code must be correct in order to work!</p>
+
+<h2>Test</h2>
+        <ol>
+          <li>With everything done, run the index.html page in Live Preview.</li>
+          <li>Nothing should happen until you click one of the city links in the navigation bar.</li>
+          <li>If things are working the current weather data for that city should appear in the index.html page.</li>
+          <li>Check all three city links by clicking on them to ensure the weather data for each city works and is loaded into the index page (pretty cool, huh?!)</li>
+        </ol>
+
+<h2>Turn Off JavaScript</h2>
+        <ol>
+          <li>Assuming you have the Web Developer Tool in the browser, click it and on the far left click “Disable” and then “Disable JavaScript”.</li>
+          <li>Reload the page.</li>
+          <li>Click a link in the navigation bar.</li>
+          <li>This time you should actually go to the page where you will see a message indicating that JavaScript must be operational for the site to work.</li>
+        </ol>
+
+        <h2>Turn On JavaScript</h2>
+        <ol>
+          <li>Return to the Web Developer Tool, click the “Disable” tab and once again click on “Disable JavaScript” to turn that behavior off (it is a toggle to turn it off and on).</li>
+          <li>Reload the page and then click the “Current” navigation bar to return to the index page.</li>
+          <li>Click a link in the navigation bar.</li>
+          <li>The original behavior should once again work.</li>
+          <li>Open the “Inspect” tool and click the “Console” tab. You should see all of the data that was logged in the console.</li>
+        </ol>
+
+        <h2>What's Next?</h2>
+        <p>Once this activity is completed and fully working, move on to the second activity of the week – Build a Search Tool. Both of these activities take you step-by-step through building code to dynamically make your web site get data and inject that data into a web page.</p>
+        <p>The assessment for this week will require you to take the skills from these two activities and make them work together.</p>
+      </article>
+    </main>
+    <footer id="footer">
+      <a rel="license" target="_blank" href="//creativecommons.org/licenses/by-sa/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="//i.creativecommons.org/l/by-sa/3.0/88x31.png" /></a> All materials (except as noted) are by <a href="http://blainerobertson.net" target="_blank" title="Visit BlaineRobertson.net">Blaine Robertson</a> and licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US" target="_blank">Creative Commons Attribution-ShareAlike 3.0 License</a>.</footer>
+  </div>
+  <script src="../js/course.min.js"></script>
+</body>
+
+</html>
