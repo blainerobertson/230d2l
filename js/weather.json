@@ -1,7 +1,7 @@
 {
 	"Franklin": {
 		"City": "Franklin",
-		"State" : "ID",
+		"State": "ID",
 		"High": 90,
 		"Low": 66,
 		"Precip": 0,
@@ -10,6 +10,7 @@
 		"Summary": "Sunny",
 		"Longitude": -111.803757,
 		"Latitude": 42.011902,
+		"zip": 83237,
 		"Hourly": {
 			"0": 67,
 			"1": 67,
@@ -39,7 +40,7 @@
 	},
 	"Greenville": {
 		"City": "Greenville",
-		"State" : "SC",
+		"State": "SC",
 		"High": 84,
 		"Low": 55,
 		"Precip": 70,
@@ -48,6 +49,7 @@
 		"Summary": "Afternoon Thunderstorms",
 		"Longitude": -82.362997,
 		"Latitude": 34.836902,
+		"zip": 29601,
 		"Hourly": {
 			"0": 55,
 			"1": 56,
@@ -77,7 +79,7 @@
 	},
 	"Springfield": {
 		"City": "Springfield",
-		"State" : "IL",
+		"State": "IL",
 		"High": 77,
 		"Low": 48,
 		"Precip": 0,
@@ -86,6 +88,7 @@
 		"Summary": "Partly Cloudy",
 		"Longitude": -89.670832,
 		"Latitude": 39.763908,
+		"zip": 62701,
 		"Hourly": {
 			"0": 48,
 			"1": 48,
