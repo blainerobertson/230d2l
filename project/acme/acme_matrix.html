@@ -7,13 +7,13 @@
  <title>Acme Project Grading Matrix | Web Frontend Development</title>
  <meta name="description" content="Acme project grading matrix for CIT 230">
  <meta name="viewport" content="width=device-width">
- <link rel="stylesheet" href="../css/course.min.css">
+ <link rel="stylesheet" href="../../css/course.min.css">
 </head>
 
 <body>
  <div id="main">
   <header id="header">
-   <img src="../images/smallbanner.jpg" alt="CIT 230 Course Banner">
+   <img src="../../images/smallbanner.jpg" alt="CIT 230 Course Banner">
   </header>
   <main>
    <article id="article">
@@ -29,20 +29,24 @@
 
     <p><strong>5 points</strong> - All folders and files (web pages, images, videos, javascript, json, css and any other site file) follow the web naming rules.&nbsp;2 points will be deducted for each naming rule error found in the site.</p>
 
-    <p><strong>5 points</strong> - All web pages have meaningful, content-related titles.&nbsp;2 points will be deducted for each missing or non-content specific title found for each page.</p>
+    <p><strong>5 points</strong> - All web pages have meaningful, content-related titles.&nbsp;5 points will be deducted if any page is missing or lacks a specific content-related title.</p>
 
     <h2>Objective 2</h2>
     <p><strong>10 points</strong> - All pages are valid CSS3. 2 points will be deducted for each validation error found by the CSS validator.</p>
+    <p><strong>5 points</strong> - Page and content layouts adapt as screen size changes and no horizontal scrolling or zooming is required to view content (including images), on any screen size. All or nothing score, if content does not adapt or requires horizontal scrolling or zooming to view the content, all 5 points will be deducted.</p>
     <p><strong>5 points</strong> - All CSS must be written and applied to the site using external CSS pages. 5 points will be deducted if any internal or inline css code is found.</p>
-    <p><strong>2 points</strong> - Page and content layouts adapt as screen sizes change. Examine the CSS, does the style sheet begin with a "mobile first" approach? 2 points if yes, 0 if no.</p>
-    <p><strong>8 points</strong> - Examine the CSS, are media queries and used to change content layouts for medium and large screen sizes? Subtract 4 points for each missing or non-contributing media query up to the maximum of 8 points.</p>
-    <p><strong>5 points</strong> - No horizontal scrolling or zooming is required to view content (including images), on any screen size. All or nothing score, if any content requires horizontal scrolling or zooming to view the content, all 5 points will be deducted.</p>
+    <p><strong>10 points</strong> - Examine the CSS.</p>
+    <ol>
+     <li>Does the style sheet begin with a "mobile first" approach? (Subtract 3 points if no)</li>
+     <li>Is at least one media query present <b>AND</b> used to change content layouts for screen sizes larger than mobile? (Subtract 3 points if no)</li>
+     <li>Is Flexbox used as the primary means of implementing responsive layout? (Subract 4 points if no)</li>
+    </ol>
 
     <h2>Objective 3</h2>
-    <p><strong>10 points</strong> - One project page will be randomly checked for implementation of usability principles as identified in the Usability Checklist (focusing on the five considered to be "low hanging fruit"). 3 points will be deducted for each missing usability concept up to 10 points.</p>
-    <p><strong>5 points</strong> - One project page will be randomly checked for page weight. The uncached weight must be equal to or less than 400k. 5 points will be deducted if the weight is greater than 400k.</p>
-    <p><strong>10 points</strong> - The PARC and typography design principles must be found applied to the style of your project site. 3 points will be deducted for each missing design principal up to 10 points maximum.</p>
-    <p><strong>5 points</strong> - The visual appearance must be uniform and consistent across the project site. 5 points will be deducted if one of the project site pages does not follow the visual appearance of other pages in the site.</p>
+    <p><strong>10 points</strong> - Usability principles from the Usability Checklist (focusing on the five "low hanging fruit" items) must be applied to content in the Acme site. 3 points will be deducted for each missing usability concept up to 10 points.</p>
+    <p><strong>5 points</strong> - The uncached weight of Acme pages must be equal to or less than 400k. 5 points will be deducted if the weight is greater than 400k.</p>
+    <p><strong>10 points</strong> - The PARC and typography design principles must be found applied to the style of the Acme project site. 3 points will be deducted for each missing design principal up to 10 points maximum.</p>
+    <p><strong>5 points</strong> - The visual appearance must be uniform and consistent across the Acme project site. 5 points will be deducted if one of the project site pages does not follow the visual appearance of other pages in the site.</p>
 
     <h2>Objective 4</h2>
     <p><strong>10 points</strong> - The template file contains all web page components (including navigation) but no content. It is valid HTML5 and CSS3. All or nothing score, 10 points if yes, 0 if no.</p>
@@ -58,7 +62,7 @@
     <p>Deduct 10 points per content page that does not use the JSON data for it's content or if the content is not operational or missing from the console.log window.</p>
 
     <h2>Objective 6</h2>
-    <p><strong>10 points</strong> - The Acme project must have a minimum of a home and four content pages. 10 points will be deducted if less than five pages are found in the Acme site.</p>
+    <p><strong>10 points</strong> - The Acme project must be accessible using a link on your home page. The project must have a minimum of a home and four content pages. 10 points will be deducted if less than five pages are found in the Acme site.</p>
     <p><strong>10 points</strong> - The content of the Acme site is free of spelling and grammar errors. 2 points will be deducted for each error found.</p>
     <p><strong>10 points</strong> - The Acme project demonstration video URL is present and:</p>
     <ul>
@@ -70,9 +74,9 @@
    </article>
   </main>
   <footer id="footer">
-   <a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="//i.creativecommons.org/l/by-sa/3.0/88x31.png" /></a> All materials (except as noted) are by <a href="http://blainerobertson.net">Blaine Robertson</a> and licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">Creative Commons Attribution-ShareAlike 3.0 License</a>.</footer>
+   <a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="//i.creativecommons.org/l/by-sa/3.0/88x31.png" /></a> All materials (except as noted) are by <a href="//blainerobertson.net">Blaine Robertson</a> and licensed under a <a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/deed.en_US">Creative Commons Attribution-ShareAlike 3.0 License</a>.</footer>
  </div>
- <script src="../js/course.min.js"></script>
+ <script src="../../js/course.min.js"></script>
 </body>
 
 </html>
