@@ -48,7 +48,7 @@
 function getData(input) {
   // Get the data from the wunderground API
   $.ajax({
-    url: "http://api.wunderground.com/api/YOUR_KEY_HERE/geolookup/conditions/q/"
+    url: "//api.wunderground.com/api/YOUR_KEY_HERE/geolookup/conditions/q/"
     + input + ".json"
     , dataType: "jsonp"
     , success: function (data) {
@@ -156,8 +156,8 @@ $("#page-nav").on("click", "a", function (evt) {
 
         <h2>An Example</h2>
         <p>You can see a live example of this activity at work in the Codepen pen below:</p>
-        <p data-height="500" data-theme-id="0" data-slug-hash="gLXzbZ" data-default-tab="result" data-user="blainer" data-embed-version="2" data-pen-title="jQuery menu bar" class="codepen">See the Pen <a href="http://codepen.io/blainer/pen/gLXzbZ/">jQuery menu bar</a> by Blaine Robertson (<a href="http://codepen.io/blainer">@blainer</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-        <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+        <p data-height="500" data-theme-id="0" data-slug-hash="gLXzbZ" data-default-tab="result" data-user="blainer" data-embed-version="2" data-pen-title="jQuery menu bar" class="codepen">See the Pen <a href="//codepen.io/blainer/pen/gLXzbZ/">jQuery menu bar</a> by Blaine Robertson (<a href="//codepen.io/blainer">@blainer</a>) on <a href="//codepen.io">CodePen</a>.</p>
+        <script async src="//production-assets.codepen.io/assets/embed/ei.js"></script>
 
         <h2>What's Next?</h2>
         <p>Once this activity is completed and fully working, move on to the second activity of the week – Build a Search Tool. Both of these activities take you step-by-step through building code to dynamically make your web site get data and inject that data into a web page.</p>
@@ -165,7 +165,7 @@ $("#page-nav").on("click", "a", function (evt) {
       </article>
     </main>
     <footer id="footer">
-      <a rel="license" target="_blank" href="//creativecommons.org/licenses/by-sa/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="//i.creativecommons.org/l/by-sa/3.0/88x31.png" /></a> All materials (except as noted) are by <a href="http://blainerobertson.net" target="_blank" title="Visit BlaineRobertson.net">Blaine Robertson</a> and licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US" target="_blank">Creative Commons Attribution-ShareAlike 3.0 License</a>.</footer>
+      <a rel="license" target="_blank" href="//creativecommons.org/licenses/by-sa/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="//i.creativecommons.org/l/by-sa/3.0/88x31.png" /></a> All materials (except as noted) are by <a href="//blainerobertson.net" target="_blank" title="Visit BlaineRobertson.net">Blaine Robertson</a> and licensed under a <a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/deed.en_US" target="_blank">Creative Commons Attribution-ShareAlike 3.0 License</a>.</footer>
   </div>
   <script src="../js/course.min.js"></script>
 </body>
