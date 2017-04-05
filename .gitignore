@@ -4,6 +4,8 @@ base/course.js
 base/online.js
 base/smallbanner.jpg
 base/template.html
+project/acme
+project/acme/*
 2.0Raw/*
 2.0Raw/week11/overview.html
 archived/*
